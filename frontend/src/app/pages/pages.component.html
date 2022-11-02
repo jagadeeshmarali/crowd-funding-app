@@ -1,0 +1,6 @@
+<ng-container *ngIf="authService.isLoggedIn;else login">
+  <app-product-list></app-product-list>
+</ng-container>
+<ng-template #login>
+  <app-login></app-login>
+</ng-template>

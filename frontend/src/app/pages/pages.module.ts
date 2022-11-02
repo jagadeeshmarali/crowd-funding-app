@@ -1,32 +1,34 @@
-import { ComponentModule } from './../components/component.module';
+import { PagesComponent } from './pages.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { PagesRoutingModule } from './pages-routing.module';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { SharedService } from '../shared.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HomePage } from './home/home.component';
-import { SharedModule } from '../shared/shared.module';
+import { ForgotPasswordPageComponent } from './forgot-password/forgot-password.component';
+import { RegisterPageComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { CommonModule } from '@angular/common';
+import { ProductListComponent } from '../components/product-list/product-list.component';
+import { SpinnerModule } from '../shared/spinner/spinner.module';
 
 
 @NgModule({
   declarations: [
-    HomePage
-
+    PagesComponent,
+    ProductListComponent,
+    RegisterPageComponent,
+    ForgotPasswordPageComponent,
+    LoginComponent,
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
+    CommonModule,
+    PagesRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
     NgbModule,
-    RouterModule,
-    SharedModule,
-    ComponentModule
-
+    SpinnerModule
   ],
   providers: [
     SharedService
