@@ -1,0 +1,47 @@
+<div class="deznav">
+  <div class="deznav-scroll" [perfectScrollbar]>
+    <ul class="metismenu" id="menu" metis-menu>
+      <li [ngClass]="{'mm-active': portfolios.indexOf(currentHref) > -1}"><a class="has-arrow ai-icon"
+          href="javascript:void()" aria-expanded="false">
+          <i class="flaticon-381-networking"></i>
+          <span class="nav-text">Portfolio</span>
+        </a>
+        <ul aria-expanded="false" [ngClass]="{'mm-show': portfolios.indexOf(currentHref) > -1}">
+          {{portfolios}}
+
+          <li *ngFor="let portfolio of portfolioData| keyvalue">
+            <a [routerLink]="['portfolio/'+ portfolio?.value['id']]"
+              class="{{(currentHref == 'portfolio/'+ portfolio?.value['id']) ? 'mm-active' : ''}}">{{portfolio?.value["portfolioName"]}}</a>
+          </li>
+
+          <li>
+          </li>
+        </ul>
+      </li>
+
+      <li [ngClass]="{'mm-active': apsArray.indexOf(currentHref) > -1}" *ngIf="authService.currentUser.role == 'admin'">
+        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+          <i class="flaticon-381-television"></i>
+          <span class="nav-text">Admin</span>
+        </a>
+        <ul aria-expanded="false" [ngClass]="{'mm-show': apsArray.indexOf(currentHref) > -1}">
+          <li><a [routerLink]="['/admin/users']"
+              class="{{(currentHref == '/admin/users') ? 'mm-active' : ''}}">Users</a></li>
+          <li><a [routerLink]="['/admin/exchanges']"
+              class="{{(currentHref == '/admin/exchanges') ? 'mm-active' : ''}}">Exchanges</a></li>
+
+        </ul>
+      </li>
+    </ul>
+
+    <!-- <div class="book-box">
+            <img src="assets/images/book.png" alt="">
+            <a href="javascript:void(0);">Generate Report ></a>
+        </div> -->
+    <!-- <div class="copyright">
+      <p><strong>Blizfolio Dashboard</strong> © 2022 All Rights Reserved</p>
+      <p class="fs-12">Made with <span [ngClass]="{'': toggleIcon, 'heart-blast': !toggleIcon}" class="heart"
+          (click)="toggleLoveIcon()"></span> by DexignZone</p>
+    </div> -->
+  </div>
+</div>
