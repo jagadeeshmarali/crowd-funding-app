@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-product-list',
@@ -8,191 +9,196 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 export class ProductListComponent implements OnInit {
 
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal, private http: HttpClient) {
+    console.log("am here");
+    this.http.get("http://localhost:8080/private/user-details").toPromise().then(data => {
+      console.log(data);
+    })
+  }
 
   ngOnInit(): void {
   }
-  
+
   products = [
+    {
+      image: "assets/images/product/2.jpg",
+      title: "Solid Women's V-neck Dark T-Shirt",
+      url: "ecom-product-detail",
+      price: "$320.00",
+      reviews: 34,
+      stock: "In stock",
+      stock_class: "fa fa-check-circle text-success",
+      product_code: "0405689",
+      brand: "Lee",
+      description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
+      ratings_class: [
         {
-          image: "assets/images/product/2.jpg",
-          title: "Solid Women's V-neck Dark T-Shirt",
-          url: "ecom-product-detail",
-          price: "$320.00",
-          reviews: 34,
-          stock: "In stock",
-          stock_class: "fa fa-check-circle text-success",
-          product_code: "0405689",
-          brand: "Lee",
-          description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
-		  ratings_class: [
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star-half-empty",
-            },
-            {
-              icon_class:"fa fa-star-half-empty",
-            }
-		  ]
-			
+          icon_class: "fa fa-star",
         },
         {
-          image: "assets/images/product/3.jpg",
-          title: "Solid Women's V-neck Dark T-Shirt",
-          url: "ecom-product-detail",
-          price: "$325.00",
-          reviews: 34,
-          stock: "In stock",
-          stock_class: "fa fa-check-circle text-success",
-          product_code: "0405689",
-          brand: "Lee",
-          description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
-		  ratings_class: [
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star-half-empty",
-            },
-            {
-              icon_class:"fa fa-star-half-empty",
-            },
-		  ]
+          icon_class: "fa fa-star",
         },
         {
-          image: "assets/images/product/4.jpg",
-          title: "Solid Women's V-neck Dark T-Shirt",
-          url: "ecom-product-detail",
-          price: "$480.00",
-          reviews: 34,
-          stock: "In stock",
-          stock_class: "fa fa-check-circle text-success",
-          product_code: "0405689",
-          brand: "Lee",
-          description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
-		  ratings_class: [
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star-half-empty",
-            },
-            {
-              icon_class:"fa fa-star-half-empty",
-            },
-		  ]
+          icon_class: "fa fa-star",
         },
         {
-          image: "assets/images/product/5.jpg",
-          title: "Solid Women's V-neck Dark T-Shirt",
-          url: "ecom-product-detail",
-          price: "$658.00",
-          reviews: 34,
-          stock: "In stock",
-          stock_class: "fa fa-check-circle text-success",
-          product_code: "0405689",
-          brand: "Lee",
-          description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
-		  ratings_class: [
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star-half-empty",
-            },
-            {
-              icon_class:"fa fa-star-half-empty",
-            },
-		  ]
+          icon_class: "fa fa-star-half-empty",
         },
         {
-          image: "assets/images/product/6.jpg",
-          title: "Solid Women's V-neck Dark T-Shirt",
-          url: "ecom-product-detail",
-          price: "$280.00",
-          reviews: 34,
-          stock: "In stock",
-          stock_class: "fa fa-check-circle text-success",
-          product_code: "0405689",
-          brand: "Lee",
-          description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
-		  ratings_class: [
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star-half-empty",
-            },
-            {
-              icon_class:"fa fa-star-half-empty",
-            },
-		  ]
+          icon_class: "fa fa-star-half-empty",
+        }
+      ]
+
+    },
+    {
+      image: "assets/images/product/3.jpg",
+      title: "Solid Women's V-neck Dark T-Shirt",
+      url: "ecom-product-detail",
+      price: "$325.00",
+      reviews: 34,
+      stock: "In stock",
+      stock_class: "fa fa-check-circle text-success",
+      product_code: "0405689",
+      brand: "Lee",
+      description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
+      ratings_class: [
+        {
+          icon_class: "fa fa-star",
         },
         {
-          image: "assets/images/product/7.jpg",
-          title: "Back Bag",
-          url: "ecom-product-detail",
-          price: "$364.00",
-          reviews: 34,
-          stock: "In stock",
-          stock_class: "fa fa-check-circle text-success",
-          product_code: "0405689",
-          brand: "Lee",
-          description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
-		  ratings_class: [
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star",
-            },
-            {
-              icon_class:"fa fa-star-half-empty",
-            },
-            {
-              icon_class:"fa fa-star-half-empty",
-            },
-		  ]
+          icon_class: "fa fa-star",
         },
+        {
+          icon_class: "fa fa-star",
+        },
+        {
+          icon_class: "fa fa-star-half-empty",
+        },
+        {
+          icon_class: "fa fa-star-half-empty",
+        },
+      ]
+    },
+    {
+      image: "assets/images/product/4.jpg",
+      title: "Solid Women's V-neck Dark T-Shirt",
+      url: "ecom-product-detail",
+      price: "$480.00",
+      reviews: 34,
+      stock: "In stock",
+      stock_class: "fa fa-check-circle text-success",
+      product_code: "0405689",
+      brand: "Lee",
+      description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
+      ratings_class: [
+        {
+          icon_class: "fa fa-star",
+        },
+        {
+          icon_class: "fa fa-star",
+        },
+        {
+          icon_class: "fa fa-star",
+        },
+        {
+          icon_class: "fa fa-star-half-empty",
+        },
+        {
+          icon_class: "fa fa-star-half-empty",
+        },
+      ]
+    },
+    {
+      image: "assets/images/product/5.jpg",
+      title: "Solid Women's V-neck Dark T-Shirt",
+      url: "ecom-product-detail",
+      price: "$658.00",
+      reviews: 34,
+      stock: "In stock",
+      stock_class: "fa fa-check-circle text-success",
+      product_code: "0405689",
+      brand: "Lee",
+      description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
+      ratings_class: [
+        {
+          icon_class: "fa fa-star",
+        },
+        {
+          icon_class: "fa fa-star",
+        },
+        {
+          icon_class: "fa fa-star",
+        },
+        {
+          icon_class: "fa fa-star-half-empty",
+        },
+        {
+          icon_class: "fa fa-star-half-empty",
+        },
+      ]
+    },
+    {
+      image: "assets/images/product/6.jpg",
+      title: "Solid Women's V-neck Dark T-Shirt",
+      url: "ecom-product-detail",
+      price: "$280.00",
+      reviews: 34,
+      stock: "In stock",
+      stock_class: "fa fa-check-circle text-success",
+      product_code: "0405689",
+      brand: "Lee",
+      description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
+      ratings_class: [
+        {
+          icon_class: "fa fa-star",
+        },
+        {
+          icon_class: "fa fa-star",
+        },
+        {
+          icon_class: "fa fa-star",
+        },
+        {
+          icon_class: "fa fa-star-half-empty",
+        },
+        {
+          icon_class: "fa fa-star-half-empty",
+        },
+      ]
+    },
+    {
+      image: "assets/images/product/7.jpg",
+      title: "Back Bag",
+      url: "ecom-product-detail",
+      price: "$364.00",
+      reviews: 34,
+      stock: "In stock",
+      stock_class: "fa fa-check-circle text-success",
+      product_code: "0405689",
+      brand: "Lee",
+      description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
+      ratings_class: [
+        {
+          icon_class: "fa fa-star",
+        },
+        {
+          icon_class: "fa fa-star",
+        },
+        {
+          icon_class: "fa fa-star",
+        },
+        {
+          icon_class: "fa fa-star-half-empty",
+        },
+        {
+          icon_class: "fa fa-star-half-empty",
+        },
+      ]
+    },
   ];
-  
-	open(content:any) {
-		this.modalService.open(content);
-	}
+
+  open(content: any) {
+    this.modalService.open(content);
+  }
 
 }
