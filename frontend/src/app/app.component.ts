@@ -10,7 +10,7 @@ import { SharedService } from './shared.service';
 export class AppComponent {
   fetchSession = true;
   loading = true;
-  title = 'kripton';
+  title = 'crowdfunding app';
   navSidebarClass: boolean = true;
   hamburgerClass: boolean = false;
   constructor(
