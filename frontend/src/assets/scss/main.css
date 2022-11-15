@@ -81,10 +81,10 @@ $color_pallate_15: #ed0b4c; */
 @import url("https://storage.cloud.google.com/thanos-9b12c.appspot.com/crowdfundingapp/assets/icons/avasta/css/style.css");
 @import url("https://storage.cloud.google.com/thanos-9b12c.appspot.com/crowdfundingapp/assets/icons/flaticon/flaticon.css");
 @import url("https://storage.cloud.google.com/thanos-9b12c.appspot.com/crowdfundingapp/assets/icons/icomoon/icomoon.css");
-@import url(https://storage.cloud.google.com/thanos-9b12c.appspot.com/crowdfundingapp/assets/vendor/animate/animate.min.css);
-@import url(https://storage.cloud.google.com/thanos-9b12c.appspot.com/crowdfundingapp/assets/vendor/aos/css/aos.min.css);
-@import url(https://storage.cloud.google.com/thanos-9b12c.appspot.com/crowdfundingapp/assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css);
-@import url(https://storage.cloud.google.com/thanos-9b12c.appspot.com/crowdfundingapp/assets/vendor/metismenu/css/metisMenu.min.css);
+@import url("https://storage.cloud.google.com/thanos-9b12c.appspot.com/crowdfundingapp/assets/vendor/animate/animate.min.css");
+@import url("https://storage.cloud.google.com/thanos-9b12c.appspot.com/crowdfundingapp/assets/vendor/aos/css/aos.min.css");
+@import url("https://storage.cloud.google.com/thanos-9b12c.appspot.com/crowdfundingapp/assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css");
+@import url("https://storage.cloud.google.com/thanos-9b12c.appspot.com/crowdfundingapp/assets/vendor/metismenu/css/metisMenu.min.css");
 .gradient_one {
   background-image: linear-gradient(to right, rgba(186, 1, 181, 0.85) 0%, rgba(103, 25, 255, 0.85) 100%); }
 
