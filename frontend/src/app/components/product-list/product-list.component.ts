@@ -11,9 +11,9 @@ export class ProductListComponent implements OnInit {
 
   constructor(private modalService: NgbModal, private http: HttpClient) {
     console.log("am here");
-    this.http.get("http://localhost:8080/private/user-details").toPromise().then(data => {
-      console.log(data);
-    })
+    // this.http.get("http://localhost:8080/private/user-details").toPromise().then(data => {
+    //   console.log(data);
+    // })
   }
 
   ngOnInit(): void {
