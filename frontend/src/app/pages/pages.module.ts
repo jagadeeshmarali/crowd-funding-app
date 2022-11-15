@@ -12,6 +12,8 @@ import { LoginComponent } from './login/login.component';
 import { CommonModule } from '@angular/common';
 import { ProductListComponent } from '../components/product-list/product-list.component';
 import { SpinnerModule } from '../shared/spinner/spinner.module';
+import { ProjectDetailPageComponent } from './project-detail/project-detail.component';
+import { ProductDetailComponent } from '../components/product-detail/product-detail.component';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { SpinnerModule } from '../shared/spinner/spinner.module';
     RegisterPageComponent,
     ForgotPasswordPageComponent,
     LoginComponent,
+    ProjectDetailPageComponent,
+    ProductDetailComponent
   ],
   imports: [
     CommonModule,
