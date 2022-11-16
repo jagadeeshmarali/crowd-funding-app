@@ -28,8 +28,8 @@ public class ProjectService {
         return projectRepo.findById(uid);
     }
 
-    public void updateProject(String uid) {
-
+    public void updateProject(PROJECT project) {
+        projectRepo.save(project);
     }
 
 }
