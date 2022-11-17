@@ -1,4 +1,9 @@
 <ng-container *ngIf="authService.isLoggedIn;else login">
+  <!-- <div class="content-body">
+    <div class="container-fluid">
+     
+    </div>
+  </div> -->
   <app-product-list></app-product-list>
 </ng-container>
 <ng-template #login>

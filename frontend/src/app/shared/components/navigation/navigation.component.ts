@@ -10,12 +10,6 @@ import { AuthenticationService } from '../../../services';
 })
 export class NavigationComponent implements OnInit {
   loading = true;
-  portfolioData: any = null
-  portfolios = [];
-  apsArray = [
-    "/admin/users",
-    "/admin/exchanges"
-  ]
 
   public currentHref: string = "";
 

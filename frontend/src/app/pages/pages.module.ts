@@ -14,6 +14,7 @@ import { ProductListComponent } from '../components/product-list/product-list.co
 import { SpinnerModule } from '../shared/spinner/spinner.module';
 import { ProjectDetailPageComponent } from './project-detail/project-detail.component';
 import { ProductDetailComponent } from '../components/product-detail/product-detail.component';
+import { ImageUploadComponent } from '../shared/components/image-upload/image-upload.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ProductDetailComponent } from '../components/product-detail/product-det
     ForgotPasswordPageComponent,
     LoginComponent,
     ProjectDetailPageComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ImageUploadComponent
   ],
   imports: [
     CommonModule,
