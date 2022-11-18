@@ -15,6 +15,7 @@ import { SpinnerModule } from '../shared/spinner/spinner.module';
 import { ProjectDetailPageComponent } from './project-detail/project-detail.component';
 import { ProductDetailComponent } from '../components/product-detail/product-detail.component';
 import { ImageUploadComponent } from '../shared/components/image-upload/image-upload.component';
+import { CreateProjectComponent } from '../components/create-project/create-project.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ImageUploadComponent } from '../shared/components/image-upload/image-up
     LoginComponent,
     ProjectDetailPageComponent,
     ProductDetailComponent,
-    ImageUploadComponent
+    ImageUploadComponent,
+    CreateProjectComponent
   ],
   imports: [
     CommonModule,
