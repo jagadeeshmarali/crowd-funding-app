@@ -1,0 +1,58 @@
+<button class="btn-primary btn" (click)="open(createProject)"> Create Project</button>
+<ng-template #createProject let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Create Project</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="createProjectForm">
+      <div class="row">
+        <div class="col">
+          <label for="title">Title: </label>
+          <input id="title" type="text" class="form-control" formControlName="title">
+        </div>
+      </div>
+      <div class="row mb-1">
+        <div class="col">
+          <label for="description">Description: </label>
+          <input id="description" type="text" class="form-control" formControlName="description">
+        </div>
+      </div>
+      <div class="row mb-1">
+        <div class="col">
+          <label for="funding_goal">Funding Goal: </label>
+          <input id="funding_goal" type="number" class="form-control" formControlName="fundingGoal">
+        </div>
+        <div class="col">
+          <label for="min_bid">Minimum Bid: </label>
+          <input id="min_bid" type="number" class="form-control" formControlName="minBid">
+        </div>
+      </div>
+      <div class="row mb-1">
+        <div class="col">
+          <label for="launch_date">Launch Date: </label>
+          <input id="launch_date" type="date" class="form-control" placeholder="YYYY-MM-DD"
+            formControlName="launchDate">
+        </div>
+        <div class="col">
+          <label for="campaign_duration">Campaign Duration: </label>
+          <input id="campaign_duration" type="number" class="form-control" placeholder="day's"
+            formControlName="campaignDuration">
+        </div>
+      </div>
+      <div class="row mb-1">
+        <div class="col">
+          <label for="image_upload">Upload Image: </label>
+          <image-upload (imageUrl)="getImageUrl($event)"></image-upload>
+          <!-- <input id="launch_date" type="date" class="form-control" placeholder="YYYY-MM-DD"
+            formControlName="launchDate"> -->
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="d-flex flex-row-reverse mb-3 mr-5">
+    <button class="btn-primary btn btn-sm" (click)="submit()" [disabled]="createProjectForm.invalid">Submit</button>
+  </div>
+</ng-template>
