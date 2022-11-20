@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id;
 
 public class BaseModel {
     @Id
-    String uid;
+    String id;
     String createdAt;
     String updatedAt;
 }

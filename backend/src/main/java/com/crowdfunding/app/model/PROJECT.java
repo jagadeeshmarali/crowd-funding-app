@@ -10,13 +10,15 @@ import java.util.List;
 @Data
 @Document("project")
 public class PROJECT extends BaseModel{
+    String userId;
     String title;
     String description;
     String slug;
     String createdBy;
-    String fundingGoal;
+    double fundingGoal;
     double minBid;
-    double launchDate;
+    String launchDate;
     Integer campaignDuration;
     String imageUrl;
+
 }

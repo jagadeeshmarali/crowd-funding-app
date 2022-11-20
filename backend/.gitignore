@@ -1,3 +1,4 @@
 .idea/
 data/
 src/main/resources/firebase_config.json
+target/
