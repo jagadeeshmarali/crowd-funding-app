@@ -1,7 +1,0 @@
-type Bid{
-    id:ID!
-    project:Project
-    user:User
-    bid_amount:Int
-
-}
