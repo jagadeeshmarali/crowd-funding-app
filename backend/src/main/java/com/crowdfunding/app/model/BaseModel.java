@@ -1,10 +1,13 @@
 package com.crowdfunding.app.model;
 
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 
+import java.util.Date;
+@Data
 public class BaseModel {
     @Id
     String id;
-    String createdAt;
-    String updatedAt;
+    Date createdAt;
+    Date updatedAt;
 }
