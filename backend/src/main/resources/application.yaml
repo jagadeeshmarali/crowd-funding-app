@@ -68,6 +68,7 @@ security:
     - /favicon.ico
     - /session/login
     - /public/**
+    - /private/get_project_by_slug
   exposed-headers:
     - X-Xsrf-Token
 
