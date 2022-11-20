@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ProjectService } from '../../services';
 
 @Component({
   selector: 'app-product-list',
@@ -8,68 +9,14 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
+  // products: any;
+  @Input() products: any;
 
-  constructor(private http: HttpClient) {
+  constructor(private projectService: ProjectService) {
+    // this.getProjects();
   }
 
   ngOnInit(): void {
   }
-
-  products = [
-    {
-      title: "Project 1",
-      description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
-      created_by: "Lee",
-      funding_goal: "$1500",
-      min_bid: "$30",
-      launch_date: "2022-12-01",
-      campaign_duration: "34 days",
-    },
-    {
-      title: "Project 1",
-      description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
-      created_by: "Lee",
-      funding_goal: "$1500",
-      min_bid: "$30",
-      launch_date: "2022-12-01",
-      campaign_duration: "34 days",
-    },
-    {
-      title: "Project 1",
-      description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
-      created_by: "Lee",
-      funding_goal: "$1500",
-      min_bid: "$30",
-      launch_date: "2022-12-01",
-      campaign_duration: "34 days",
-    },
-    {
-      title: "Project 1",
-      description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
-      created_by: "Lee",
-      funding_goal: "$1500",
-      min_bid: "$30",
-      launch_date: "2022-12-01",
-      campaign_duration: "34 days",
-    },
-    {
-      title: "Project 1",
-      description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
-      created_by: "Lee",
-      funding_goal: "$1500",
-      min_bid: "$30",
-      launch_date: "2022-12-01",
-      campaign_duration: "34 days",
-    },
-    {
-      title: "Project 1",
-      description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
-      created_by: "Lee",
-      funding_goal: "$1500",
-      min_bid: "$30",
-      launch_date: "2022-12-01",
-      campaign_duration: "34 days",
-    },
-  ];
 
 }

@@ -6,6 +6,7 @@ import { RegisterPageComponent } from './register/register.component';
 import { AdminGuard, AuthGuard } from '../guards';
 import { ForgotPasswordPageComponent } from './forgot-password/forgot-password.component';
 import { ProjectDetailPageComponent } from './project-detail/project-detail.component';
+import { MyProjectsPageComponent } from './my-projects/my-projects.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,12 @@ const routes: Routes = [
     path: "project/:slug",
     component: ProjectDetailPageComponent,
     pathMatch: "full"
+  },
+  {
+    path: "my-projects",
+    component: MyProjectsPageComponent,
+    pathMatch: "full",
+    canActivate: [AuthGuard]
   }
 
 

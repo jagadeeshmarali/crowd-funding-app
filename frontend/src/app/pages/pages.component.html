@@ -1,7 +1,7 @@
 <ng-container *ngIf="authService.isLoggedIn;else login">
   <div class="content-body">
     <div class="container-fluid">
-      <app-product-list></app-product-list>
+      <app-product-list [products]="products"></app-product-list>
     </div>
   </div>
 </ng-container>

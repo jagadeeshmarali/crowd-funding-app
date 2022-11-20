@@ -1,4 +1,4 @@
-<div class="d-flex flex-row-reverse mb-3">
+<div class="d-flex flex-row-reverse mb-4">
 	<create-project></create-project>
 </div>
 
@@ -20,15 +20,24 @@
 		<div class="card">
 			<div class="card-body">
 				<div class="row m-b-30">
+					<div class="col-md-5 col-xxl-12">
+						<div class="new-arrival-product mb-4 mb-xxl-4 mb-md-0">
+							<div class="new-arrivals-img-contnent">
+								<img class="img-fluid" [src]=product.imageUrl alt="">
+							</div>
+						</div>
+					</div>
 					<div class="col-md-7 col-xxl-12">
 						<div class="new-arrival-content position-relative">
-							<h4><a [routerLink]="['/project/ecom-product-detail']">{{product.title}}</a></h4>
-							<p class="price">{{product.funding_goal}}</p>
-							<p>Availability: <span class="item"> {{product.campaign_duration}} <i
-										class="{{product.launch_date}}"></i></span>
+							<h4><a [routerLink]="['/project',product.slug]">{{product.title}}</a></h4>
+							<p class="price"> ${{product.fundingGoal}}</p>
+							<p>Availability: <span class="item"> {{product.campaignEndDate | date: 'dd/MM/yyyy'}}
+									<!-- <i class="{{product.launchDate
+										}}"></i> -->
+								</span>
 							</p>
-							<p>Min Bid: <span class="item">{{product.min_bid}}</span> </p>
-							<p>Created By: <span class="item">{{product.created_by}}</span></p>
+							<p>Min Bid: <span class="item"> $ {{product.minBid}}</span> </p>
+							<p>Created By: <span class="item">{{product.createdBy}}</span></p>
 							<p class="text-content">{{product.description}}</p>
 						</div>
 					</div>
