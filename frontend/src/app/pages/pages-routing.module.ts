@@ -5,6 +5,7 @@ import { PagesComponent } from './pages.component';
 import { RegisterPageComponent } from './register/register.component';
 import { AdminGuard, AuthGuard } from '../guards';
 import { ForgotPasswordPageComponent } from './forgot-password/forgot-password.component';
+import { ProjectDetailPageComponent } from './project-detail/project-detail.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,11 @@ const routes: Routes = [
     component: ForgotPasswordPageComponent,
     pathMatch: "full"
   },
+  {
+    path: "project/:slug",
+    component: ProjectDetailPageComponent,
+    pathMatch: "full"
+  }
 
 
 ];

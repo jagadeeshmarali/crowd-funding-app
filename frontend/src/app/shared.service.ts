@@ -6,7 +6,7 @@ import { Injectable, Output } from '@angular/core';
 export class SharedService {
 
   navSidebarClass: boolean = true;
-  hamburgerClass: boolean = true;
+  hamburgerClass: boolean = false;
 
   constructor() { }
 
