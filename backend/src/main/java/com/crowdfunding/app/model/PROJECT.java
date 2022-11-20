@@ -14,11 +14,11 @@ public class PROJECT extends BaseModel{
     String title;
     String description;
     String slug;
-    String createdBy;
     double fundingGoal;
     double minBid;
-    String launchDate;
-    Integer campaignDuration;
+    Date launchDate;
+    Date campaignEndDate;
     String imageUrl;
+    String createdBy;
 
 }
