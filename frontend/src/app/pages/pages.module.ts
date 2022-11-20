@@ -16,6 +16,7 @@ import { ProjectDetailPageComponent } from './project-detail/project-detail.comp
 import { ProductDetailComponent } from '../components/product-detail/product-detail.component';
 import { ImageUploadComponent } from '../shared/components/image-upload/image-upload.component';
 import { CreateProjectComponent } from '../components/create-project/create-project.component';
+import { PaymentComponent } from '../components/payment/payment.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { CreateProjectComponent } from '../components/create-project/create-proj
     ProjectDetailPageComponent,
     ProductDetailComponent,
     ImageUploadComponent,
-    CreateProjectComponent
+    CreateProjectComponent,
+    PaymentComponent
   ],
   imports: [
     CommonModule,
