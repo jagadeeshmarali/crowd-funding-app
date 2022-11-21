@@ -15,7 +15,6 @@ public class PROJECT extends BaseModel{
     String description;
     String slug;
     double fundingGoal;
-    double minBid;
     Date launchDate;
     Date campaignEndDate;
     String imageUrl;
