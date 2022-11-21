@@ -5,6 +5,7 @@ import com.crowdfunding.app.model.Reward;
 import com.crowdfunding.app.repository.RewardRepo;
 import com.crowdfunding.app.utils.Slug;
 import lombok.AllArgsConstructor;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -33,6 +34,7 @@ public class RewardService {
 
     public Reward createReward(Reward reward){
         reward.setUserId(securityService.getUser().getUid());
+        reward.setProjectId(new ObjectId(reward.getProjectId().toString()));
         reward.setCreatedAt(new Date());
         reward.setUpdatedAt(new Date());
         return rewardRepo.save(reward);

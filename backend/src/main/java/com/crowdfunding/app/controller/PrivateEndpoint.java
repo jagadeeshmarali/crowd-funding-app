@@ -56,6 +56,10 @@ public class PrivateEndpoint {
     public Reward createReward(@RequestBody Reward reward){
         return rewardService.createReward(reward);
     }
+    @GetMapping(value = "/reward-list")
+    public List<Reward> getRewards(){
+        return rewardService.getList();
+    }
 
     // Transaction APIs
     @RequestMapping(value = "/transaction-create", method = RequestMethod.POST)
