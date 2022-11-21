@@ -45,13 +45,13 @@ public class TransactionService {
         return transactionRepo.findById(uid);
     }
 
-    public List<Transaction> getUserTransactions(String userId){
+    public List<Transaction> getUserTransactions(){
         Query query = new Query();
         query.addCriteria(Criteria.where("userId").is(securityService.getUser().getUid()));
         return mt.find(query,Transaction.class);
     }
 
-    public List<Transaction> getProjectTransactions(String userId, String projectId){
+    public List<Transaction> getProjectTransactions(String projectId){
         Query query = new Query();
         query.addCriteria(Criteria.where("userId").is(securityService.getUser().getUid()));
         query.addCriteria(Criteria.where("projectId").is(projectId));

@@ -68,13 +68,13 @@ public class PrivateEndpoint {
     }
 
     @GetMapping("/get-user-transactions")
-    public List<Transaction> getUserTransactions(String userId){
-        return transactionService.getUserTransactions(userId);
+    public List<Transaction> getUserTransactions(){
+        return transactionService.getUserTransactions();
     }
 
     @GetMapping("/get-project-transactions")
-    public List<Transaction> getProjectTransactions(String userId, String projectId){
-        return transactionService.getProjectTransactions(userId, projectId);
+    public List<Transaction> getProjectTransactions(String projectId){
+        return transactionService.getProjectTransactions(projectId);
     }
 
 }
