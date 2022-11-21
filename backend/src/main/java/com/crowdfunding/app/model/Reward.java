@@ -9,6 +9,7 @@ import io.opencensus.tags.propagation.TagContextTextFormat.Getter;
 @Document("reward")
 public class Reward extends BaseModel{
     String projectId;
+    String userId;
     Double rewardAmount;
     String description;
 

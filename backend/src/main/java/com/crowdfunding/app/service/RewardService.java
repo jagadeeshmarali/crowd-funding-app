@@ -31,9 +31,8 @@ public class RewardService {
     }
 
 
-    public Reward createReward(Reward reward, String projectId){
-        reward.setId(securityService.getUser().getUid() + UUID.randomUUID().toString());
-        reward.setProjectId(projectId);
+    public Reward createReward(Reward reward){
+        reward.setUserId(securityService.getUser().getUid());
         reward.setCreatedAt(new Date());
         reward.setUpdatedAt(new Date());
         return rewardRepo.save(reward);
@@ -47,17 +46,16 @@ public class RewardService {
         return rewardRepo.findById(uid);
     }
 
-    public Reward updateReward(Reward payload, String projectId) {
+    public Reward updateReward(Reward payload, String projectId, String rewardId) {
         Query query = new Query();
-        //Add criteria
-        //query.addCriteria(Criteria.where("user_id").is(securityService.getUser().getUid()));
-        //query.addCriteria(Criteria.where("_id").is(id));
 
+        query.addCriteria(Criteria.where("userId").is(securityService.getUser().getUid()));
+        query.addCriteria(Criteria.where("projectId").is(projectId));
+        query.addCriteria(Criteria.where("_id").is(rewardId));
         Reward reward = mongoTemplate.findOne(query,Reward.class);
         reward.setDescription(payload.getDescription());
-        reward.setRewardAmount(payload.getRewardAmount());
-
         mongoTemplate.save(reward);
+
         return mongoTemplate.findOne(query, Reward.class);
     }
 }

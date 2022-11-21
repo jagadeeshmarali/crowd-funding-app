@@ -51,7 +51,7 @@ public class ProjectService {
 
     public PROJECT update(String id, PROJECT payload){
         Query query = new Query();
-        query.addCriteria(Criteria.where("user_id").is(securityService.getUser().getUid()));
+        query.addCriteria(Criteria.where("userId").is(securityService.getUser().getUid()));
         query.addCriteria(Criteria.where("_id").is(id));
         PROJECT project = mt.findOne(query,PROJECT.class);
         project.setDescription(payload.getDescription());
