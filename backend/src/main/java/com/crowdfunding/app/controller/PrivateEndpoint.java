@@ -1,8 +1,12 @@
 package com.crowdfunding.app.controller;
 
 import com.crowdfunding.app.model.PROJECT;
+import com.crowdfunding.app.model.Reward;
+import com.crowdfunding.app.model.Transaction;
 import com.crowdfunding.app.model.auth.User;
 import com.crowdfunding.app.service.ProjectService;
+import com.crowdfunding.app.service.RewardService;
+import com.crowdfunding.app.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -15,7 +19,10 @@ import java.util.List;
 public class PrivateEndpoint {
     @Autowired
     ProjectService projectService;
-
+    @Autowired
+    RewardService rewardService;
+    @Autowired
+    TransactionService transactionService;
     @GetMapping("user-details")
     public ResponseEntity<User> getUserInfo(@AuthenticationPrincipal User user) {
         return ResponseEntity.ok(user);
@@ -43,6 +50,31 @@ public class PrivateEndpoint {
     ResponseEntity<String> deleteProject(String project_uid) {
         projectService.deleteProject(project_uid);
         return ResponseEntity.ok("OK");
+    }
+    // Reward APIs
+    @RequestMapping(value = "/reward-create", method = RequestMethod.POST)
+    public Reward createReward(@RequestBody Reward reward){
+        return rewardService.createReward(reward);
+    }
+    @GetMapping(value = "/reward-list")
+    public List<Reward> getRewards(){
+        return rewardService.getList();
+    }
+
+    // Transaction APIs
+    @RequestMapping(value = "/transaction-create", method = RequestMethod.POST)
+    public Transaction createTransaction(@RequestBody Transaction transaction){
+        return transactionService.createTransaction(transaction);
+    }
+
+    @GetMapping("/get-user-transactions")
+    public List<Transaction> getUserTransactions(){
+        return transactionService.getUserTransactions();
+    }
+
+    @GetMapping("/get-project-transactions")
+    public List<Transaction> getProjectTransactions(String projectId){
+        return transactionService.getProjectTransactions(projectId);
     }
 
 }
