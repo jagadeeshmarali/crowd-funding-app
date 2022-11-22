@@ -1,13 +1,17 @@
 <div class="deznav">
   <div class="deznav-scroll" [perfectScrollbar]>
     <ul class="metismenu" id="menu" metis-menu>
-      <li><a class="ai-icon" href="/" aria-expanded="false">
+      <li><a class="ai-icon" [routerLink]="['/']" aria-expanded="false">
           <!-- <i class="flaticon-381-networking"></i> -->
           <span class="nav-text">Dashboard</span>
         </a>
-        <a class="ai-icon" href="/my-projects" aria-expanded="false">
+        <a class="ai-icon" [routerLink]="['/my-projects']" aria-expanded="false">
           <!-- <i class="flaticon-381-networking"></i> -->
           <span class="nav-text">My Projects</span>
+        </a>
+        <a class="ai-icon" [routerLink]="['/my-transactions']" aria-expanded="false">
+          <!-- <i class="flaticon-381-networking"></i> -->
+          <span class="nav-text">My Transactions</span>
         </a>
       </li>
     </ul>

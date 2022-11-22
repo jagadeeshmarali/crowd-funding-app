@@ -7,6 +7,7 @@ import { AdminGuard, AuthGuard } from '../guards';
 import { ForgotPasswordPageComponent } from './forgot-password/forgot-password.component';
 import { ProjectDetailPageComponent } from './project-detail/project-detail.component';
 import { MyProjectsPageComponent } from './my-projects/my-projects.component';
+import { MyTransactionPageComponent } from './my-transactions/my-transactions.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,12 @@ const routes: Routes = [
   {
     path: "my-projects",
     component: MyProjectsPageComponent,
+    pathMatch: "full",
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "my-transactions",
+    component: MyTransactionPageComponent,
     pathMatch: "full",
     canActivate: [AuthGuard]
   }

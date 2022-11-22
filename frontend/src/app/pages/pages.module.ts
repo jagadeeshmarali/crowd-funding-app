@@ -17,6 +17,8 @@ import { ProductDetailComponent } from '../components/product-detail/product-det
 import { ImageUploadComponent } from '../shared/components/image-upload/image-upload.component';
 import { CreateProjectComponent } from '../components/create-project/create-project.component';
 import { MyProjectsPageComponent } from './my-projects/my-projects.component';
+import { MyTransactionPageComponent } from './my-transactions/my-transactions.component';
+import { TransactionListComponent } from '../components/transaction-list/transaction-list.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { MyProjectsPageComponent } from './my-projects/my-projects.component';
     ProductDetailComponent,
     ImageUploadComponent,
     CreateProjectComponent,
-    MyProjectsPageComponent
+    MyProjectsPageComponent,
+    MyTransactionPageComponent,
+    TransactionListComponent
   ],
   imports: [
     CommonModule,
