@@ -60,4 +60,12 @@ public class RewardService {
 
         return mongoTemplate.findOne(query, Reward.class);
     }
+    public List<Reward> getRewardByProjectId(String id) {
+
+        Query query = new Query();
+
+        query.addCriteria(Criteria.where("projectId").is(new ObjectId(id)));
+        query.addCriteria(Criteria.where("userId").is(securityService.getUser().getUid()));
+        return mongoTemplate.find(query,Reward.class);
+    }
 }

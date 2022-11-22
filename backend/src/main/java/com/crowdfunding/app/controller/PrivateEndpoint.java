@@ -60,6 +60,10 @@ public class PrivateEndpoint {
     public List<Reward> getRewards(){
         return rewardService.getList();
     }
+    @GetMapping(value = "/reward-list-by-project")
+    public List<Reward> getRewardByProjectId(String id){
+        return rewardService.getRewardByProjectId(id);
+    }
 
     // Transaction APIs
     @RequestMapping(value = "/transaction-create", method = RequestMethod.POST)

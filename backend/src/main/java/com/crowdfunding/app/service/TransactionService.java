@@ -3,6 +3,7 @@ package com.crowdfunding.app.service;
 import com.crowdfunding.app.model.Transaction;
 import com.crowdfunding.app.repository.TransactionRepo;
 import lombok.AllArgsConstructor;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.Sort;
@@ -31,7 +32,11 @@ public class TransactionService {
     }
 
     public Transaction createTransaction(Transaction transaction){
+        transaction.setProjectId(new ObjectId(transaction.getProjectId().toString()));
+        transaction.setRewardId(new ObjectId(transaction.getRewardId().toString()));
         transaction.setUserId(securityService.getUser().getUid());
+        transaction.setFromUserName(securityService.getUser().getName());
+        transaction.setFromUserImage(securityService.getUser().getPicture());
         transaction.setCreatedAt(new Date());
         transaction.setUpdatedAt(new Date());
         return transactionRepo.save(transaction);
@@ -54,7 +59,7 @@ public class TransactionService {
     public List<Transaction> getProjectTransactions(String projectId){
         Query query = new Query();
         query.addCriteria(Criteria.where("userId").is(securityService.getUser().getUid()));
-        query.addCriteria(Criteria.where("projectId").is(projectId));
+        query.addCriteria(Criteria.where("projectId").is(new ObjectId(projectId)));
         return mt.find(query,Transaction.class);
     }
 
