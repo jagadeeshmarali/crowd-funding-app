@@ -13,6 +13,7 @@ export class ProductDetailComponent implements OnInit {
   projectDetail: any;
   rewards: any;
   transactions: any;
+  url;
 
   constructor(private modalService: NgbModal,
     private projectService: ProjectService,
@@ -33,6 +34,8 @@ export class ProductDetailComponent implements OnInit {
         this.transactions = transactions;
       })
       this.projectDetail = data;
+      var host = window.location.protocol + "//" + window.location.host;
+      this.url = host + "/project/" + this.projectDetail['slug']
     })
 
   }

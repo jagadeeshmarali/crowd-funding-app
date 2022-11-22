@@ -18,6 +18,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { NavHeaderComponent } from './shared/components/nav-header/nav-header.component';
 import { NavigationComponent } from './shared/components/navigation/navigation.component';
 import { SpinnerModule } from './shared/spinner/spinner.module';
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
 
 
@@ -35,7 +37,9 @@ import { SpinnerModule } from './shared/spinner/spinner.module';
     FormsModule,
     PerfectScrollbarModule,
     NgbModule,
-    SpinnerModule
+    SpinnerModule,
+    ShareButtonsModule,
+    ShareIconsModule,
   ],
   declarations: [
     AppComponent,

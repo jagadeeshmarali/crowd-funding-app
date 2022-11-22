@@ -19,6 +19,8 @@ import { CreateProjectComponent } from '../components/create-project/create-proj
 import { MyProjectsPageComponent } from './my-projects/my-projects.component';
 import { MyTransactionPageComponent } from './my-transactions/my-transactions.component';
 import { TransactionListComponent } from '../components/transaction-list/transaction-list.component';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import { TransactionListComponent } from '../components/transaction-list/transac
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
-    SpinnerModule
+    SpinnerModule,
+    ShareButtonsModule,
+    ShareIconsModule,
   ],
   providers: [
     SharedService

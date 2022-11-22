@@ -28,6 +28,9 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
               "./node_modules/ngx-lightbox/lightbox.css",
+              "./node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "./node_modules/ngx-sharebuttons/themes/circles/circles-dark-theme.scss",
+              "./node_modules/ngx-sharebuttons/themes/modern/modern-dark-theme.scss",
               "./node_modules/metismenujs/dist/metismenujs.css",
               "src/assets/css/style.css"
             ],
