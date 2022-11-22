@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col-xl-12">
+    <div class="table-responsive table-hover fs-14">
+      <table class="table display mb-4 dataTablesCard dataTable short-one  card-table text-black" id="example5">
+        <thead>
+          <tr>
+            <th>Transaction ID</th>
+            <th>Date</th>
+            <th>Project Title</th>
+            <th>Amount</th>
+            <th>Note</th>
+            <th>Reward Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let transaction of transactions; let i= index">
+            <td class="pr-0">
+              {{transaction?.id}}
+            </td>
+            <td>{{transaction?.createdAt | date: 'dd/MM/yyyy' }}</td>
+            <td><a [routerLink]="['/project',transaction?.projectSlug]">{{transaction?.projectTitle}}</a></td>
+            <td>{{transaction?.rewardAmount}}</td>
+
+
+            <td>
+              <p class="mb-0 wspace-no">{{transaction.note || "N/A"}}</p>
+            </td>
+            <td>
+              <span class="text-black font-w600">{{transaction.rewardStatus}}</span>
+            </td>
+            <!-- <td>
+              <a href="javascript:void(0);"
+                class="btn-link {{transaction.status_class}} float-right">{{transaction.status}}</a>
+            </td> -->
+          </tr>
+
+
+
+
+        </tbody>
+      </table>
+
+      <div class="d-flex justify-content-between p-2">
+        <!-- <ngb-pagination class="mr-3" [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
+          (pageChange)="updateTransactionListing()">
+        </ngb-pagination>
+
+        <select class="custom-select" style="width: auto" [(ngModel)]="pageSize"
+          (ngModelChange)="updateTransactionListing()">
+          <option [ngValue]="5">5 items per page</option>
+          <option [ngValue]="10">10 items per page</option>
+          <option [ngValue]="20">20 items per page</option>
+        </select> -->
+      </div>
+    </div>
+  </div>
+</div>
