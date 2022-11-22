@@ -37,23 +37,21 @@
 										</p>
 										<p>Created By: <span class="item">{{projectDetail?.createdBy}}</span></p>
 										<p class="text-content">{{projectDetail?.description}}</p>
-										<!-- <div class="d-flex align-items-end flex-wrap mt-4">
-											<div class="filtaring-area mb-3 mr-3">
-												<div class="size-filter">
-													<h4 class="m-b-15">Select size</h4>
+										<div class="row">
+											<div class="col-3" *ngFor="let reward of rewards;let i=index">
+												<a (click)="selectedReward(rewards[i]);open(payment)">
+													<div class="card">
+														<div class="card-body">
+															<div class="row">
+																<p> {{reward?.description}}</p>
+																<p> {{reward?.rewardAmount}}</p>
+															</div>
+														</div>
+													</div>
+												</a>
 
-
-												</div>
 											</div>
-											<div class="col-2 px-0  mb-3 mr-3">
-												<input type="number" name="num" class="form-control input-btn input-number" value="1">
-											</div>
-											<div class="shopping-cart  mb-3 mr-3">
-												<a class="btn btn-primary" href="javascript:void(0)"><i
-														class="fa fa-shopping-basket mr-2"></i>Add
-													to cart</a>
-											</div>
-										</div> -->
+										</div>
 									</div>
 								</div>
 							</div>
@@ -62,5 +60,88 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="table-responsive table-hover fs-14">
+					<table class="table display mb-4 dataTablesCard dataTable short-one  card-table text-black" id="example5">
+						<thead>
+							<tr>
+								<th>Transaction ID</th>
+								<th>Date</th>
+								<th>User</th>
+								<th>Amount</th>
+								<th>Note</th>
+								<th>Reward Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor="let transaction of transactions; let i= index">
+								<td class="pr-0">
+									{{transaction?.id}}
+								</td>
+								<td>{{transaction?.createdAt | date: 'dd/MM/yyyy' }}</td>
+								<td><img [src]="transaction?.fromUserImage" class="rounded-circle mr-2 width30 height30"
+										alt=""><span>{{transaction?.fromUserName}}</span></td>
+								<td>{{transaction?.rewardAmount}}</td>
+
+
+								<td>
+									<p class="mb-0 wspace-no">{{transaction.note || "N/A"}}</p>
+								</td>
+								<td>
+									<span class="text-black font-w600">{{transaction.rewardStatus}}</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </div>
+<ng-template #payment let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Payment</h4>
+		<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<form [formGroup]="paymentForm">
+			<div class="row">
+				<div class="col">
+					<label for="title">Name: </label>
+					<input id="title" type="text" class="form-control" formControlName="name">
+				</div>
+			</div>
+			<div class="row mb-1">
+				<div class="col">
+					<label for="description">Card Number: </label>
+					<input id="description" type="text" class="form-control" formControlName="cardNumber">
+				</div>
+			</div>
+			<div class="row mb-1">
+				<div class="col">
+					<label for="launch_date">Expiration : </label>
+					<input id="launch_date" type="text" class="form-control" formControlName="expiration">
+				</div>
+				<div class="col">
+					<label for="campaign_end_date">CVV: </label>
+					<input id="campaign_end_date" type="integer" class="form-control" formControlName="cvv">
+				</div>
+			</div>
+			<div class="row mb-1">
+				<div class="col">
+					<label for="launch_date">Amount : </label>
+					<input id="launch_date" type="text" class="form-control" formControlName="amount">
+				</div>
+			</div>
+		</form>
+
+	</div>
+	<div class="d-flex justify-content-center mb-3 mr-5">
+		<button class="btn-primary btn btn-sm" [disabled]="paymentForm.invalid">Checkout</button>
+	</div>
+</ng-template>
