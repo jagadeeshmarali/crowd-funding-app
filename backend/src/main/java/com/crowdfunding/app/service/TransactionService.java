@@ -58,7 +58,7 @@ public class TransactionService {
 
     public List<Transaction> getProjectTransactions(String projectId){
         Query query = new Query();
-        query.addCriteria(Criteria.where("userId").is(securityService.getUser().getUid()));
+//        query.addCriteria(Criteria.where("userId").is(securityService.getUser().getUid()));
         query.addCriteria(Criteria.where("projectId").is(new ObjectId(projectId)));
         return mt.find(query,Transaction.class);
     }
