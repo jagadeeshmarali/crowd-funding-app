@@ -21,6 +21,7 @@ import { MyTransactionPageComponent } from './my-transactions/my-transactions.co
 import { TransactionListComponent } from '../components/transaction-list/transaction-list.component';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { FundedProjectsPageComponent } from './funded-projects/funded-projects.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
     CreateProjectComponent,
     MyProjectsPageComponent,
     MyTransactionPageComponent,
-    TransactionListComponent
+    TransactionListComponent,
+    FundedProjectsPageComponent
   ],
   imports: [
     CommonModule,

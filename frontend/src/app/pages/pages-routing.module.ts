@@ -8,6 +8,7 @@ import { ForgotPasswordPageComponent } from './forgot-password/forgot-password.c
 import { ProjectDetailPageComponent } from './project-detail/project-detail.component';
 import { MyProjectsPageComponent } from './my-projects/my-projects.component';
 import { MyTransactionPageComponent } from './my-transactions/my-transactions.component';
+import { FundedProjectsPageComponent } from './funded-projects/funded-projects.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,12 @@ const routes: Routes = [
   {
     path: "my-transactions",
     component: MyTransactionPageComponent,
+    pathMatch: "full",
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "my-funded-projects",
+    component: FundedProjectsPageComponent,
     pathMatch: "full",
     canActivate: [AuthGuard]
   }

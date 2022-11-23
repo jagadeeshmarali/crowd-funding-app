@@ -19,5 +19,4 @@ public class PROJECT extends BaseModel{
     Date campaignEndDate;
     String imageUrl;
     String createdBy;
-
 }

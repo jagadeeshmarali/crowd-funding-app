@@ -21,4 +21,9 @@ export class ProjectService {
   getAllProjects() {
     return this.http.get(`${environment.backend_url}/get_all_projects`);
   }
+  async getMyFundedProjects() {
+    let results = await this.http.get(`${environment.backend_url}/get_all_projects`).toPromise();
+    return results;
+
+  }
 }
