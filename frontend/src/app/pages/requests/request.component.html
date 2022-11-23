@@ -1,0 +1,48 @@
+<div class="content-body">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="table-responsive table-hover fs-14">
+          <table class="table display mb-4 dataTablesCard dataTable short-one  card-table text-black" id="example5">
+            <thead>
+              <tr>
+                <th>Request ID</th>
+                <th>Date</th>
+                <th>Request Description</th>
+                <th>Amount</th>
+                <th>From</th>
+                <th>Request Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let request of requests; let i= index">
+                <td class="pr-0">
+                  {{request?.id}}
+                </td>
+                <td>{{request?.createdAt | date: 'dd/MM/yyyy' }}</td>
+                <td><a [routerLink]="['/project',request?.projectSlug]">{{request?.description}}</a></td>
+                <td>{{request?.amount}}</td>
+                <td><img [src]="request?.fromUserImage" class="rounded-circle mr-2 width30 height30"
+                    alt=""><span>{{request?.fromUserName}}</span></td>
+
+                <td>
+                  <span class="text-black font-w600">{{request.approvalStatus}}</span>
+                </td>
+                <td><button class="btn btn-primary btn-sm" [disabled]="request.approvalStatus"> Approve</button></td>
+                <!-- <td>
+                  <a href="javascript:void(0);"
+                    class="btn-link {{request.status_class}} float-right">{{request.status}}</a>
+                </td> -->
+              </tr>
+
+
+
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
