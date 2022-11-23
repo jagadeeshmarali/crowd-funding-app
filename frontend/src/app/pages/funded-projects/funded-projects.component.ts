@@ -13,8 +13,8 @@ export class FundedProjectsPageComponent {
         transactions.forEach(ele => {
           let temp = projects.find(x => x.slug == ele.projectSlug);
           if (temp) {
-            console.log(temp);
-            if (temp in this.projects) { }
+            if (this.projects.find(x => x.slug == temp.slug)) {
+            }
             else { this.projects.push(temp) }
           }
         })
