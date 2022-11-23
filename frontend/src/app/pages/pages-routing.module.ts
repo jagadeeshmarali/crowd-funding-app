@@ -9,6 +9,7 @@ import { ProjectDetailPageComponent } from './project-detail/project-detail.comp
 import { MyProjectsPageComponent } from './my-projects/my-projects.component';
 import { MyTransactionPageComponent } from './my-transactions/my-transactions.component';
 import { FundedProjectsPageComponent } from './funded-projects/funded-projects.component';
+import { RequestPageComponent } from './requests/request.component';
 
 const routes: Routes = [
   {
@@ -48,6 +49,12 @@ const routes: Routes = [
     component: FundedProjectsPageComponent,
     pathMatch: "full",
     canActivate: [AuthGuard]
+  },
+  {
+    path: "requests",
+    component: RequestPageComponent,
+    pathMatch: "full",
+    canActivate: [AuthGuard, AdminGuard]
   }
 
 

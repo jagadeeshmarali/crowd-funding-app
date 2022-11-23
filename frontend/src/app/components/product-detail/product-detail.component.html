@@ -36,6 +36,7 @@
 										<p>Availability: <span class="item"> {{projectDetail?.campaignEndDate | date: 'dd/MM/yyyy'}}</span>
 										</p>
 										<p>Created By: <span class="item">{{projectDetail?.createdBy}}</span></p>
+										<p>Amount Received: <span class="item">$ {{amountReceived}}</span></p>
 										<p class="text-content">{{projectDetail?.description}}</p>
 										<div class="row">
 											<div class="col-3" *ngFor="let reward of rewards;let i=index">
@@ -43,14 +44,21 @@
 													<div class="card">
 														<div class="card-body">
 															<div class="row">
+																Description:
 																<p> {{reward?.description}}</p>
-																<p> {{reward?.rewardAmount}}</p>
+															</div>
+															<div class="row">
+																<p> Amount: {{reward?.rewardAmount}}</p>
 															</div>
 														</div>
 													</div>
 												</a>
 
 											</div>
+										</div>
+										<div class="row">
+											<button class="btn btn-primary btn-sm" (click)="openRequest(requestAmount)"> Request
+												Amount</button>
 										</div>
 									</div>
 								</div>
@@ -151,4 +159,34 @@
 	<div class="d-flex justify-content-center mb-3 mr-5">
 		<button class="btn-primary btn btn-sm" [disabled]="paymentForm.invalid" (click)="checkout()">Checkout</button>
 	</div>
+</ng-template>
+
+<ng-template #requestAmount let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Request</h4>
+		<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<form [formGroup]="requestAmountForm">
+			<div class="row">
+				<div class="col">
+					<label for="title">Request: </label>
+					<input id="title" type="text" class="form-control" formControlName="request">
+				</div>
+			</div>
+			<div class="row mb-1">
+				<div class="col">
+					<label for="description">Amount: </label>
+					<input id="description" type="integer" class="form-control" formControlName="amount">
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="d-flex justify-content-center mb-3 mr-5">
+		<button class="btn-primary btn btn-sm" [disabled]="requestAmountForm.invalid"
+			(click)="submitRequest()">Request</button>
+	</div>
+
 </ng-template>

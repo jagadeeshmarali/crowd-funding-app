@@ -22,6 +22,7 @@ import { TransactionListComponent } from '../components/transaction-list/transac
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { FundedProjectsPageComponent } from './funded-projects/funded-projects.component';
+import { RequestPageComponent } from './requests/request.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { FundedProjectsPageComponent } from './funded-projects/funded-projects.c
     MyProjectsPageComponent,
     MyTransactionPageComponent,
     TransactionListComponent,
-    FundedProjectsPageComponent
+    FundedProjectsPageComponent,
+    RequestPageComponent
   ],
   imports: [
     CommonModule,

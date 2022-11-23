@@ -2,7 +2,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { AuthenticationService, ProjectService, RewardService, TransactionService } from '../../services';
+import { AuthenticationService, ProjectService, RewardService, TransactionService, UserRequestService } from '../../services';
 
 @Component({
   selector: 'app-product-detail',
@@ -15,13 +15,15 @@ export class ProductDetailComponent implements OnInit {
   transactions: any;
   url;
   transactionPayload: any;
+  amountReceived = 0;
 
   constructor(private modalService: NgbModal,
     private projectService: ProjectService,
     public route: ActivatedRoute,
     public authService: AuthenticationService,
     public rewardService: RewardService,
-    public transactionService: TransactionService
+    public transactionService: TransactionService,
+    public userRequestService: UserRequestService
   ) {
     console.log(this.route.snapshot.params["slug"]);
     this.projectService.getProjectBySlug(this.route.snapshot.params["slug"]).toPromise().then((data) => {
@@ -33,7 +35,11 @@ export class ProductDetailComponent implements OnInit {
       this.transactionService.getProjectTransactions(data["id"]).toPromise().then((transactions: Array<any>) => {
         console.log(transactions);
         this.transactions = transactions;
+        this.transactions?.forEach(element => {
+          this.amountReceived += element?.rewardAmount
+        });
       })
+
       this.projectDetail = data;
       var host = window.location.protocol + "//" + window.location.host;
       this.url = host + "/project/" + this.projectDetail['slug']
@@ -49,6 +55,9 @@ export class ProductDetailComponent implements OnInit {
       this.modalService.open(content);
     }
 
+  }
+  openRequest(content) {
+    this.modalService.open(content);
   }
   paymentForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
@@ -76,6 +85,23 @@ export class ProductDetailComponent implements OnInit {
   }
   checkout() {
     this.transactionService.create(this.transactionPayload).toPromise().then((data) => {
+      console.log(data);
+      this.modalService.dismissAll();
+    })
+  }
+  requestAmountForm = new FormGroup({
+    request: new FormControl('', [Validators.required]),
+    amount: new FormControl('', [Validators.required])
+  });
+  submitRequest() {
+    console.log(this.requestAmountForm.value);
+    let payload = {
+      description: this.requestAmountForm.value["request"],
+      amount: this.requestAmountForm.value["amount"],
+      projectId: this.projectDetail['id'],
+      projectSlug: this.projectDetail['slug']
+    }
+    this.userRequestService.create(payload).toPromise().then((data) => {
       console.log(data);
       this.modalService.dismissAll();
     })
