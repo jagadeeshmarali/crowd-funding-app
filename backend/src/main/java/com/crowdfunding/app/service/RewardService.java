@@ -65,7 +65,6 @@ public class RewardService {
         Query query = new Query();
 
         query.addCriteria(Criteria.where("projectId").is(new ObjectId(id)));
-        query.addCriteria(Criteria.where("userId").is(securityService.getUser().getUid()));
         return mongoTemplate.find(query,Reward.class);
     }
 }

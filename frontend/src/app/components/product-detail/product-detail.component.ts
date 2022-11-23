@@ -14,6 +14,7 @@ export class ProductDetailComponent implements OnInit {
   rewards: any;
   transactions: any;
   url;
+  transactionPayload: any;
 
   constructor(private modalService: NgbModal,
     private projectService: ProjectService,
@@ -44,7 +45,10 @@ export class ProductDetailComponent implements OnInit {
   }
 
   open(content: any) {
-    this.modalService.open(content);
+    if (this.authService.currentUser.uid != this.projectDetail['userId']) {
+      this.modalService.open(content);
+    }
+
   }
   paymentForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
@@ -57,7 +61,6 @@ export class ProductDetailComponent implements OnInit {
 
 
   selectedReward(data) {
-    console.log(data);
     let payload = {
       ...data,
       projectId: this.projectDetail["id"],
@@ -68,12 +71,14 @@ export class ProductDetailComponent implements OnInit {
     }
     this.paymentForm.get("amount").setValue(payload["rewardAmount"])
     this.paymentForm.get("amount").disable();
-    // delete payload['id']
-    // // console.log(payload);
-    // this.transactionService.create(payload).toPromise().then((data) => {
-    //   console.log(data);
-    // })
-
+    delete payload['id']
+    this.transactionPayload = payload;
+  }
+  checkout() {
+    this.transactionService.create(this.transactionPayload).toPromise().then((data) => {
+      console.log(data);
+      this.modalService.dismissAll();
+    })
   }
 
 }
