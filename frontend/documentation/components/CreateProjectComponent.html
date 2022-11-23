@@ -1,0 +1,889 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>crowdfundingapp documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">crowdfundingapp documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  CreateProjectComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/create-project/create-project.component.ts</code>
+</p>
+
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>create-project</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./create-project.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#createProjectForm" >createProjectForm</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#fb" >fb</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addRewardGroup" >addRewardGroup</a>
+                            </li>
+                            <li>
+                                <a href="#createReward" >createReward</a>
+                            </li>
+                            <li>
+                                <a href="#getImageUrl" >getImageUrl</a>
+                            </li>
+                            <li>
+                                <a href="#open" >open</a>
+                            </li>
+                            <li>
+                                <a href="#submit" >submit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#projectDetails" >projectDetails</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#rewards" >rewards</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(modalService: NgbModal, projectService: <a href="../injectables/ProjectService.html" target="_self">ProjectService</a>, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, rewardService: <a href="../injectables/RewardService.html" target="_self">RewardService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/components/create-project/create-project.component.ts:10</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>modalService</td>
+                                                  
+                                                        <td>
+                                                                    <code>NgbModal</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>projectService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProjectService.html" target="_self" >ProjectService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>rewardService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RewardService.html" target="_self" >RewardService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="projectDetails"></a>
+                        <b>projectDetails</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/components/create-project/create-project.component.ts:12</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addRewardGroup"></a>
+                    <span class="name">
+                        <span ><b>addRewardGroup</b></span>
+                        <a href="#addRewardGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addRewardGroup()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="53"
+                            class="link-to-prism">src/app/components/create-project/create-project.component.ts:53</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createReward"></a>
+                    <span class="name">
+                        <span ><b>createReward</b></span>
+                        <a href="#createReward"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createReward()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/components/create-project/create-project.component.ts:22</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getImageUrl"></a>
+                    <span class="name">
+                        <span ><b>getImageUrl</b></span>
+                        <a href="#getImageUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getImageUrl(url)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/app/components/create-project/create-project.component.ts:50</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>url</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="open"></a>
+                    <span class="name">
+                        <span ><b>open</b></span>
+                        <a href="#open"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>open(createProject)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/components/create-project/create-project.component.ts:32</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>createProject</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submit"></a>
+                    <span class="name">
+                        <span ><b>submit</b></span>
+                        <a href="#submit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>submit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">src/app/components/create-project/create-project.component.ts:35</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createProjectForm"></a>
+                    <span class="name">
+                        <span ><b>createProjectForm</b></span>
+                        <a href="#createProjectForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormGroup({
+    title: new FormControl(&#x27;&#x27;, [Validators.required]),
+    description: new FormControl(&#x27;&#x27;, [Validators.required]),
+    fundingGoal: new FormControl(&#x27;&#x27;, [Validators.required]),
+    launchDate: new FormControl(&#x27;&#x27;, [Validators.required]),
+    campaignEndDate: new FormControl(&#x27;&#x27;, [Validators.required]),
+    imageUrl: new FormControl(&#x27;&#x27;, [Validators.required]),
+    rewards: this.fb.array([this.createReward()])
+  })</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/components/create-project/create-project.component.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fb"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>fb</b></span>
+                        <a href="#fb"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/components/create-project/create-project.component.ts:11</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rewards"></a>
+                        <span class="name"><b>rewards</b><a href="#rewards"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>rewards()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/create-project/create-project.component.ts:29</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { FormGroup, FormControl, Validators, FormArray, FormBuilder } from &#x27;@angular/forms&#x27;;
+import { Component, Output, EventEmitter } from &quot;@angular/core&quot;;
+import { NgbModal } from &quot;@ng-bootstrap/ng-bootstrap&quot;;
+import { ProjectService, RewardService } from &#x27;./../../services&#x27;;
+
+@Component({
+  selector: &quot;create-project&quot;,
+  templateUrl: &quot;./create-project.component.html&quot;
+})
+export class CreateProjectComponent {
+  constructor(private modalService: NgbModal, private projectService: ProjectService, public fb: FormBuilder, private rewardService: RewardService) { }
+  @Output() projectDetails &#x3D; new EventEmitter();
+  createProjectForm &#x3D; new FormGroup({
+    title: new FormControl(&#x27;&#x27;, [Validators.required]),
+    description: new FormControl(&#x27;&#x27;, [Validators.required]),
+    fundingGoal: new FormControl(&#x27;&#x27;, [Validators.required]),
+    launchDate: new FormControl(&#x27;&#x27;, [Validators.required]),
+    campaignEndDate: new FormControl(&#x27;&#x27;, [Validators.required]),
+    imageUrl: new FormControl(&#x27;&#x27;, [Validators.required]),
+    rewards: this.fb.array([this.createReward()])
+  });
+  createReward(): FormGroup {
+    return this.fb.group({
+      projectId: new FormControl(&#x27;&#x27;),
+      description: new FormControl(&#x27;&#x27;, Validators.required),
+      rewardAmount: new FormControl(0, Validators.required)
+    })
+  }
+  get rewards(): FormArray {
+    return &lt;FormArray&gt;this.createProjectForm.get(&#x27;rewards&#x27;);
+  }
+  open(createProject) {
+    this.modalService.open(createProject);
+  }
+  submit() {
+    this.projectService.create(this.createProjectForm.value).toPromise().then((data) &#x3D;&gt; {
+      console.log(data);
+      console.log(this.createProjectForm.get(&#x27;rewards&#x27;).value)
+      let rewards: Array&lt;any&gt; &#x3D; this.createProjectForm.get(&#x27;rewards&#x27;).value;
+      rewards.forEach(ele &#x3D;&gt; {
+        let payload &#x3D; { ...ele }
+        payload.projectId &#x3D; data[&#x27;id&#x27;];
+        this.rewardService.create(payload).toPromise().then((data2) &#x3D;&gt; {
+          console.log(data2);
+        });
+      })
+      this.modalService.dismissAll();
+    })
+  }
+  getImageUrl(url) {
+    this.createProjectForm.get(&quot;imageUrl&quot;).setValue(url);
+  }
+  addRewardGroup() {
+    this.rewards.push(this.createReward());
+  }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;button class&#x3D;&quot;btn-primary btn&quot; (click)&#x3D;&quot;open(createProject)&quot;&gt; Create Project&lt;/button&gt;
+&lt;ng-template #createProject let-modal&gt;
+  &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+    &lt;h4 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;modal-basic-title&quot;&gt;Create Project&lt;/h4&gt;
+    &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close&quot; aria-label&#x3D;&quot;Close&quot; (click)&#x3D;&quot;modal.dismiss(&#x27;Cross click&#x27;)&quot;&gt;
+      &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+    &lt;form [formGroup]&#x3D;&quot;createProjectForm&quot;&gt;
+      &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col&quot;&gt;
+          &lt;label for&#x3D;&quot;title&quot;&gt;Title: &lt;/label&gt;
+          &lt;input id&#x3D;&quot;title&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;title&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;row mb-1&quot;&gt;
+        &lt;div class&#x3D;&quot;col&quot;&gt;
+          &lt;label for&#x3D;&quot;description&quot;&gt;Description: &lt;/label&gt;
+          &lt;textarea id&#x3D;&quot;description&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; rows&#x3D;&quot;4&quot; formControlName&#x3D;&quot;description&quot;&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;row mb-1&quot;&gt;
+        &lt;div class&#x3D;&quot;col&quot;&gt;
+          &lt;label for&#x3D;&quot;funding_goal&quot;&gt;Funding Goal: &lt;/label&gt;
+          &lt;input id&#x3D;&quot;funding_goal&quot; type&#x3D;&quot;number&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;fundingGoal&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;row mb-1&quot;&gt;
+        &lt;div class&#x3D;&quot;col&quot;&gt;
+          &lt;label for&#x3D;&quot;launch_date&quot;&gt;Launch Date: &lt;/label&gt;
+          &lt;input id&#x3D;&quot;launch_date&quot; type&#x3D;&quot;date&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;launchDate&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col&quot;&gt;
+          &lt;label for&#x3D;&quot;campaign_end_date&quot;&gt;Campaign End date: &lt;/label&gt;
+          &lt;input id&#x3D;&quot;campaign_end_date&quot; type&#x3D;&quot;date&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;campaignEndDate&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;row mb-1&quot;&gt;
+        &lt;div class&#x3D;&quot;col&quot;&gt;
+          &lt;label for&#x3D;&quot;image_upload&quot;&gt;Upload Image: &lt;/label&gt;
+          &lt;image-upload (imageUrl)&#x3D;&quot;getImageUrl($event)&quot;&gt;&lt;/image-upload&gt;
+          &lt;!-- &lt;input id&#x3D;&quot;launch_date&quot; type&#x3D;&quot;date&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;YYYY-MM-DD&quot;
+            formControlName&#x3D;&quot;launchDate&quot;&gt; --&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div formArrayName&#x3D;&quot;rewards&quot; *ngFor&#x3D;&quot;let rewardArray of rewards.controls;last as isLast;let i&#x3D;index&quot;&gt;
+        &lt;div class&#x3D;&quot;row mb-1&quot; [formGroupName]&#x3D;&quot;i&quot;&gt;
+          &lt;div class&#x3D;&quot;col-8&quot;&gt;
+            &lt;label for&#x3D;&quot;reward_description&quot;&gt;Reward Description: &lt;/label&gt;
+            &lt;textarea id&#x3D;&quot;{{&#x27;description&#x27; + i}}&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot;
+              formControlName&#x3D;&quot;description&quot;&gt;&lt;/textarea&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col&quot;&gt;
+            &lt;label for&#x3D;&quot;amount&quot;&gt;Amount : &lt;/label&gt;
+            &lt;input id&#x3D;&quot;{{&#x27;amount&#x27; + i}}&quot; type&#x3D;&quot;integer&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;rewardAmount&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;button class&#x3D;&quot;btn btn-primary btn-sm&quot; (click)&#x3D;&quot;addRewardGroup()&quot;&gt; Add&lt;/button&gt;
+    &lt;/form&gt;
+
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;d-flex flex-row-reverse mb-3 mr-5&quot;&gt;
+    &lt;button class&#x3D;&quot;btn-primary btn btn-sm&quot; (click)&#x3D;&quot;submit()&quot; [disabled]&#x3D;&quot;createProjectForm.invalid&quot;&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><button class="btn-primary btn" (click)="open(createProject)"> Create Project</button><ng-template #createProject let-modal>  <div class="modal-header">    <h4 class="modal-title" id="modal-basic-title">Create Project</h4>    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss(\'Cross click\')">      <span aria-hidden="true">&times;</span>    </button>  </div>  <div class="modal-body">    <form [formGroup]="createProjectForm">      <div class="row">        <div class="col">          <label for="title">Title: </label>          <input id="title" type="text" class="form-control" formControlName="title">        </div>      </div>      <div class="row mb-1">        <div class="col">          <label for="description">Description: </label>          <textarea id="description" type="text" class="form-control" rows="4" formControlName="description"></textarea>        </div>      </div>      <div class="row mb-1">        <div class="col">          <label for="funding_goal">Funding Goal: </label>          <input id="funding_goal" type="number" class="form-control" formControlName="fundingGoal">        </div>      </div>      <div class="row mb-1">        <div class="col">          <label for="launch_date">Launch Date: </label>          <input id="launch_date" type="date" class="form-control" formControlName="launchDate">        </div>        <div class="col">          <label for="campaign_end_date">Campaign End date: </label>          <input id="campaign_end_date" type="date" class="form-control" formControlName="campaignEndDate">        </div>      </div>      <div class="row mb-1">        <div class="col">          <label for="image_upload">Upload Image: </label>          <image-upload (imageUrl)="getImageUrl($event)"></image-upload>          <!-- <input id="launch_date" type="date" class="form-control" placeholder="YYYY-MM-DD"            formControlName="launchDate"> -->        </div>      </div>      <div formArrayName="rewards" *ngFor="let rewardArray of rewards.controls;last as isLast;let i=index">        <div class="row mb-1" [formGroupName]="i">          <div class="col-8">            <label for="reward_description">Reward Description: </label>            <textarea id="{{\'description\' + i}}" type="text" class="form-control"              formControlName="description"></textarea>          </div>          <div class="col">            <label for="amount">Amount : </label>            <input id="{{\'amount\' + i}}" type="integer" class="form-control" formControlName="rewardAmount">          </div>        </div>      </div>      <button class="btn btn-primary btn-sm" (click)="addRewardGroup()"> Add</button>    </form>  </div>  <div class="d-flex flex-row-reverse mb-3 mr-5">    <button class="btn-primary btn btn-sm" (click)="submit()" [disabled]="createProjectForm.invalid">Submit</button>  </div></ng-template></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateProjectComponent', 'selector': 'create-project'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotPasswordPageComponent', 'selector': 'app-forgot-password'},{'name': 'FundedProjectsPageComponent', 'selector': 'funded-projects-page'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'ImageUploadComponent', 'selector': 'image-upload'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MyProjectsPageComponent', 'selector': 'my-projects'},{'name': 'MyTransactionPageComponent', 'selector': 'my-transaction-page'},{'name': 'NavHeaderComponent', 'selector': 'app-nav-header'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PagesComponent', 'selector': 'app-pages'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProjectDetailPageComponent', 'selector': 'product-detail-page'},{'name': 'RegisterPageComponent', 'selector': 'app-register'},{'name': 'SpinnerComponent', 'selector': 'spinner'},{'name': 'TransactionListComponent', 'selector': 'transaction-list'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CreateProjectComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CreateProjectComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

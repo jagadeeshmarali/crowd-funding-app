@@ -1,0 +1,357 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>crowdfundingapp documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">crowdfundingapp documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  TransactionListComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/transaction-list/transaction-list.component.ts</code>
+</p>
+
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>transaction-list</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./transaction-list.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#transactions" >transactions</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="transactions"></a>
+                        <b>transactions</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>{}</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/components/transaction-list/transaction-list.component.ts:8</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input } from &quot;@angular/core&quot;;
+
+@Component({
+  selector: &quot;transaction-list&quot;,
+  templateUrl: &quot;./transaction-list.component.html&quot;
+})
+export class TransactionListComponent {
+  @Input() transactions &#x3D; [];
+
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;row&quot;&gt;
+  &lt;div class&#x3D;&quot;col-xl-12&quot;&gt;
+    &lt;div class&#x3D;&quot;table-responsive table-hover fs-14&quot;&gt;
+      &lt;table class&#x3D;&quot;table display mb-4 dataTablesCard dataTable short-one  card-table text-black&quot; id&#x3D;&quot;example5&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Transaction ID&lt;/th&gt;
+            &lt;th&gt;Date&lt;/th&gt;
+            &lt;th&gt;Project Title&lt;/th&gt;
+            &lt;th&gt;Amount&lt;/th&gt;
+            &lt;th&gt;Note&lt;/th&gt;
+            &lt;th&gt;Reward Status&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr *ngFor&#x3D;&quot;let transaction of transactions; let i&#x3D; index&quot;&gt;
+            &lt;td class&#x3D;&quot;pr-0&quot;&gt;
+              {{transaction?.id}}
+            &lt;/td&gt;
+            &lt;td&gt;{{transaction?.createdAt | date: &#x27;dd/MM/yyyy&#x27; }}&lt;/td&gt;
+            &lt;td&gt;&lt;a [routerLink]&#x3D;&quot;[&#x27;/project&#x27;,transaction?.projectSlug]&quot;&gt;{{transaction?.projectTitle}}&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;{{transaction?.rewardAmount}}&lt;/td&gt;
+
+
+            &lt;td&gt;
+              &lt;p class&#x3D;&quot;mb-0 wspace-no&quot;&gt;{{transaction.note || &quot;N/A&quot;}}&lt;/p&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;span class&#x3D;&quot;text-black font-w600&quot;&gt;{{transaction.rewardStatus}}&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;!-- &lt;td&gt;
+              &lt;a href&#x3D;&quot;javascript:void(0);&quot;
+                class&#x3D;&quot;btn-link {{transaction.status_class}} float-right&quot;&gt;{{transaction.status}}&lt;/a&gt;
+            &lt;/td&gt; --&gt;
+          &lt;/tr&gt;
+
+
+
+
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+
+      &lt;div class&#x3D;&quot;d-flex justify-content-between p-2&quot;&gt;
+        &lt;!-- &lt;ngb-pagination class&#x3D;&quot;mr-3&quot; [collectionSize]&#x3D;&quot;collectionSize&quot; [(page)]&#x3D;&quot;page&quot; [pageSize]&#x3D;&quot;pageSize&quot;
+          (pageChange)&#x3D;&quot;updateTransactionListing()&quot;&gt;
+        &lt;/ngb-pagination&gt;
+
+        &lt;select class&#x3D;&quot;custom-select&quot; style&#x3D;&quot;width: auto&quot; [(ngModel)]&#x3D;&quot;pageSize&quot;
+          (ngModelChange)&#x3D;&quot;updateTransactionListing()&quot;&gt;
+          &lt;option [ngValue]&#x3D;&quot;5&quot;&gt;5 items per page&lt;/option&gt;
+          &lt;option [ngValue]&#x3D;&quot;10&quot;&gt;10 items per page&lt;/option&gt;
+          &lt;option [ngValue]&#x3D;&quot;20&quot;&gt;20 items per page&lt;/option&gt;
+        &lt;/select&gt; --&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="col-xl-12">    <div class="table-responsive table-hover fs-14">      <table class="table display mb-4 dataTablesCard dataTable short-one  card-table text-black" id="example5">        <thead>          <tr>            <th>Transaction ID</th>            <th>Date</th>            <th>Project Title</th>            <th>Amount</th>            <th>Note</th>            <th>Reward Status</th>          </tr>        </thead>        <tbody>          <tr *ngFor="let transaction of transactions; let i= index">            <td class="pr-0">              {{transaction?.id}}            </td>            <td>{{transaction?.createdAt | date: \'dd/MM/yyyy\' }}</td>            <td><a [routerLink]="[\'/project\',transaction?.projectSlug]">{{transaction?.projectTitle}}</a></td>            <td>{{transaction?.rewardAmount}}</td>            <td>              <p class="mb-0 wspace-no">{{transaction.note || "N/A"}}</p>            </td>            <td>              <span class="text-black font-w600">{{transaction.rewardStatus}}</span>            </td>            <!-- <td>              <a href="javascript:void(0);"                class="btn-link {{transaction.status_class}} float-right">{{transaction.status}}</a>            </td> -->          </tr>        </tbody>      </table>      <div class="d-flex justify-content-between p-2">        <!-- <ngb-pagination class="mr-3" [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"          (pageChange)="updateTransactionListing()">        </ngb-pagination>        <select class="custom-select" style="width: auto" [(ngModel)]="pageSize"          (ngModelChange)="updateTransactionListing()">          <option [ngValue]="5">5 items per page</option>          <option [ngValue]="10">10 items per page</option>          <option [ngValue]="20">20 items per page</option>        </select> -->      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateProjectComponent', 'selector': 'create-project'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotPasswordPageComponent', 'selector': 'app-forgot-password'},{'name': 'FundedProjectsPageComponent', 'selector': 'funded-projects-page'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'ImageUploadComponent', 'selector': 'image-upload'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MyProjectsPageComponent', 'selector': 'my-projects'},{'name': 'MyTransactionPageComponent', 'selector': 'my-transaction-page'},{'name': 'NavHeaderComponent', 'selector': 'app-nav-header'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PagesComponent', 'selector': 'app-pages'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProjectDetailPageComponent', 'selector': 'product-detail-page'},{'name': 'RegisterPageComponent', 'selector': 'app-register'},{'name': 'SpinnerComponent', 'selector': 'spinner'},{'name': 'TransactionListComponent', 'selector': 'transaction-list'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'TransactionListComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TransactionListComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
