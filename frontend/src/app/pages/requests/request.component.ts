@@ -14,4 +14,9 @@ export class RequestPageComponent {
     })
 
   }
+  update(id) {
+    this.userRequestService.updateRequest(id).toPromise().then((data) => {
+      console.log(data);
+    })
+  }
 }

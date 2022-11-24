@@ -29,7 +29,8 @@
                 <td>
                   <span class="text-black font-w600">{{request.approvalStatus}}</span>
                 </td>
-                <td><button class="btn btn-primary btn-sm" [disabled]="request.approvalStatus"> Approve</button></td>
+                <td><button class="btn btn-primary btn-sm" [disabled]="request.approvalStatus"
+                    (click)="update(request?.id)"> Approve</button></td>
                 <!-- <td>
                   <a href="javascript:void(0);"
                     class="btn-link {{request.status_class}} float-right">{{request.status}}</a>

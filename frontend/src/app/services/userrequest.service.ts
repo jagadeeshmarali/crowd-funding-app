@@ -15,4 +15,11 @@ export class UserRequestService {
   getRequests() {
     return this.http.get(environment.backend_url + "/get_all_requests");
   }
+  updateRequest(id) {
+    return this.http.post(environment.backend_url + `/update/user-request?id=${id}`, {
+      "id": id,
+      "status": true
+    });
+
+  }
 }
