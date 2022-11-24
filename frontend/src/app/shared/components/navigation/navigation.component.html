@@ -17,7 +17,8 @@
           <!-- <i class="flaticon-381-networking"></i> -->
           <span class="nav-text">My Funding Projects</span>
         </a>
-        <a class="ai-icon" [routerLink]="['/requests']" aria-expanded="false">
+        <a class="ai-icon" [routerLink]="['/requests']" aria-expanded="false"
+          *ngIf="authService.currentUser.role=='admin'">
           <!-- <i class="flaticon-381-networking"></i> -->
           <span class="nav-text">User Requests</span>
         </a>

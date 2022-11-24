@@ -56,7 +56,8 @@
 
 											</div>
 										</div>
-										<div class="row">
+										<div class="row"
+											*ngIf="authService.currentUser.uid == projectDetail?.userId && amountReceived==projectDetail?.fundingGoal">
 											<button class="btn btn-primary btn-sm" (click)="openRequest(requestAmount)"> Request
 												Amount</button>
 										</div>
