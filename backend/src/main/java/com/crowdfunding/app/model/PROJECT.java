@@ -12,8 +12,8 @@ import java.util.List;
 public class PROJECT extends BaseModel{
     
 
-    private String userId;
-    private String title;
+    String userId;
+    String title;
     String description;
     String slug;
     double fundingGoal;

@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class UserRequest extends BaseModel {
     String description;
     double amount;
-    private String userId;
+    String userId;
     ObjectId projectId;
     boolean approvalStatus;
     String fromUserName;
