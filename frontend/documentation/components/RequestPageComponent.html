@@ -38,7 +38,7 @@
   <li>Components</li>
   <li
   >
-  ForgotPasswordPageComponent</li>
+  RequestPageComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -52,9 +52,6 @@
             <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
         </li>
         <li >
-            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
-        </li>
-        <li >
             <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
 </ul>
@@ -64,18 +61,12 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/pages/forgot-password/forgot-password.component.ts</code>
+    <code>src/app/pages/requests/request.component.ts</code>
 </p>
 
 
 
 
-    <p class="comment">
-        <h3>Implements</h3>
-    </p>
-    <p class="comment">
-                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
-    </p>
 
 
 <section>
@@ -95,19 +86,15 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-forgot-password</code></td>
+                <td class="col-md-9"><code>request-page</code></td>
             </tr>
 
-            <tr>
-                <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./forgot-password.component.css</code></td>
-            </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./forgot-password.component.html</code></td>
+                <td class="col-md-9"><code>./request.component.html</code></td>
             </tr>
 
 
@@ -134,7 +121,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#emailForm" >emailForm</a>
+                                <a href="#requests" >requests</a>
                             </li>
                         </ul>
                     </td>
@@ -149,10 +136,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#ngOnInit" >ngOnInit</a>
-                            </li>
-                            <li>
-                                <a href="#onLoggedin" >onLoggedin</a>
+                                <a href="#update" >update</a>
                             </li>
                         </ul>
                     </td>
@@ -172,12 +156,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(authService: <a href="../injectables/AuthenticationService.html" target="_self">AuthenticationService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+<code>constructor(userRequestService: <a href="../injectables/UserRequestService.html" target="_self">UserRequestService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/pages/forgot-password/forgot-password.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/pages/requests/request.component.ts:9</a></div>
                             </td>
                         </tr>
 
@@ -195,22 +179,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>authService</td>
+                                                        <td>userRequestService</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/AuthenticationService.html" target="_self" >AuthenticationService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>router</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                                        <code><a href="../injectables/UserRequestService.html" target="_self" >UserRequestService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -240,24 +212,24 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="ngOnInit"></a>
+                    <a name="update"></a>
                     <span class="name">
-                        <span ><b>ngOnInit</b></span>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>update</b></span>
+                        <a href="#update"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>ngOnInit()</code>
+<code>update(id)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">src/app/pages/forgot-password/forgot-password.component.ts:18</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="17"
+                            class="link-to-prism">src/app/pages/requests/request.component.ts:17</a></div>
                 </td>
             </tr>
 
@@ -265,46 +237,37 @@
             <tr>
                 <td class="col-md-4">
 
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                     </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="onLoggedin"></a>
-                    <span class="name">
-                        <span ><b>onLoggedin</b></span>
-                        <a href="#onLoggedin"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>onLoggedin()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">src/app/pages/forgot-password/forgot-password.component.ts:20</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
+                        
                     </div>
                 </td>
             </tr>
@@ -320,23 +283,27 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="emailForm"></a>
+                    <a name="requests"></a>
                     <span class="name">
-                        <span ><b>emailForm</b></span>
-                        <a href="#emailForm"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>requests</b></span>
+                        <a href="#requests"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>new FormGroup({
-    email: new FormControl(&#x27;&#x27;),
-  })</code>
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/pages/forgot-password/forgot-password.component.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/pages/requests/request.component.ts:9</a></div>
                         </td>
                     </tr>
 
@@ -349,57 +316,75 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Router } from &#x27;@angular/router&#x27;;
-import { Component, OnInit } from &#x27;@angular/core&#x27;;
-import { FormControl, FormGroup } from &#x27;@angular/forms&#x27;;
-import { AuthenticationService } from &#x27;../../services&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &quot;@angular/core&quot;;
+import { UserRequestService } from &quot;../../services&quot;;
 
 @Component({
-  selector: &#x27;app-forgot-password&#x27;,
-  templateUrl: &#x27;./forgot-password.component.html&#x27;,
-  styleUrls: [&#x27;./forgot-password.component.css&#x27;]
+  selector: &quot;request-page&quot;,
+  templateUrl: &quot;./request.component.html&quot;
 })
-export class ForgotPasswordPageComponent implements OnInit {
+export class RequestPageComponent {
+  requests &#x3D; []
+  constructor(private userRequestService: UserRequestService) {
+    this.userRequestService.getRequests().toPromise().then((data: Array&lt;any&gt;) &#x3D;&gt; {
+      console.log(data);
+      this.requests &#x3D; data
+    })
 
-  emailForm &#x3D; new FormGroup({
-    email: new FormControl(&#x27;&#x27;),
-  });
-  constructor(private authService: AuthenticationService, private router: Router) { }
-
-  ngOnInit() { }
-
-  onLoggedin() {
-    this.authService.forgotPassword(this.emailForm.value.email).then(res &#x3D;&gt; {
-      this.router.navigate([&#x27;/&#x27;]);
+  }
+  update(id) {
+    this.userRequestService.updateRequest(id).toPromise().then((data) &#x3D;&gt; {
+      console.log(data);
     })
   }
-
-}
-</code></pre>
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;authincation h-100&quot;&gt;
-  &lt;div class&#x3D;&quot;container vh-100&quot;&gt;
-    &lt;div class&#x3D;&quot;row justify-content-center h-100 align-items-center&quot;&gt;
-      &lt;div class&#x3D;&quot;col-lg-6 col-md-8&quot;&gt;
-        &lt;div class&#x3D;&quot;authincation-content&quot;&gt;
-          &lt;div class&#x3D;&quot;row no-gutters&quot;&gt;
-            &lt;div class&#x3D;&quot;col-xl-12&quot;&gt;
-              &lt;div class&#x3D;&quot;auth-form&quot;&gt;
-                &lt;h4 class&#x3D;&quot;text-center mb-4&quot;&gt;Forgot Password&lt;/h4&gt;
-                &lt;form role&#x3D;&quot;form&quot; [formGroup]&#x3D;&quot;emailForm&quot;&gt;
-                  &lt;div class&#x3D;&quot;form-group&quot;&gt;
-                    &lt;label&gt;&lt;strong&gt;Email&lt;/strong&gt;&lt;/label&gt;
-                    &lt;input type&#x3D;&quot;email&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;email&quot; placeholder&#x3D;&quot;hello@example.com&quot;&gt;
-                  &lt;/div&gt;
-                  &lt;div class&#x3D;&quot;text-center&quot;&gt;
-                    &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary btn-block&quot; (click)&#x3D;&quot;onLoggedin()&quot;&gt;SUBMIT&lt;/button&gt;
-                  &lt;/div&gt;
-                &lt;/form&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;content-body&quot;&gt;
+  &lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div class&#x3D;&quot;col-xl-12&quot;&gt;
+        &lt;div class&#x3D;&quot;table-responsive table-hover fs-14&quot;&gt;
+          &lt;table class&#x3D;&quot;table display mb-4 dataTablesCard dataTable short-one  card-table text-black&quot; id&#x3D;&quot;example5&quot;&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th&gt;Request ID&lt;/th&gt;
+                &lt;th&gt;Date&lt;/th&gt;
+                &lt;th&gt;Request Description&lt;/th&gt;
+                &lt;th&gt;Amount&lt;/th&gt;
+                &lt;th&gt;From&lt;/th&gt;
+                &lt;th&gt;Request Status&lt;/th&gt;
+                &lt;th&gt;Action&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              &lt;tr *ngFor&#x3D;&quot;let request of requests; let i&#x3D; index&quot;&gt;
+                &lt;td class&#x3D;&quot;pr-0&quot;&gt;
+                  {{request?.id}}
+                &lt;/td&gt;
+                &lt;td&gt;{{request?.createdAt | date: &#x27;dd/MM/yyyy&#x27; }}&lt;/td&gt;
+                &lt;td&gt;&lt;a [routerLink]&#x3D;&quot;[&#x27;/project&#x27;,request?.projectSlug]&quot;&gt;{{request?.description}}&lt;/a&gt;&lt;/td&gt;
+                &lt;td&gt;{{request?.amount}}&lt;/td&gt;
+                &lt;td&gt;&lt;img [src]&#x3D;&quot;request?.fromUserImage&quot; class&#x3D;&quot;rounded-circle mr-2 width30 height30&quot;
+                    alt&#x3D;&quot;&quot;&gt;&lt;span&gt;{{request?.fromUserName}}&lt;/span&gt;&lt;/td&gt;
+
+                &lt;td&gt;
+                  &lt;span class&#x3D;&quot;text-black font-w600&quot;&gt;{{request.approvalStatus}}&lt;/span&gt;
+                &lt;/td&gt;
+                &lt;td&gt;&lt;button class&#x3D;&quot;btn btn-primary btn-sm&quot; [disabled]&#x3D;&quot;request.approvalStatus&quot;
+                    (click)&#x3D;&quot;update(request?.id)&quot;&gt; Approve&lt;/button&gt;&lt;/td&gt;
+                &lt;!-- &lt;td&gt;
+                  &lt;a href&#x3D;&quot;javascript:void(0);&quot;
+                    class&#x3D;&quot;btn-link {{request.status_class}} float-right&quot;&gt;{{request.status}}&lt;/a&gt;
+                &lt;/td&gt; --&gt;
+              &lt;/tr&gt;
+
+
+
+
+            &lt;/tbody&gt;
+          &lt;/table&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -407,12 +392,6 @@ export class ForgotPasswordPageComponent implements OnInit {
 &lt;/div&gt;</code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-styleData">
-                <p class="comment">
-                    <code>./forgot-password.component.css</code>
-                </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
-    </div>
 
     <div class="tab-pane fade " id="c-tree">
         <div id="tree-container"></div>
@@ -439,10 +418,10 @@ export class ForgotPasswordPageComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="authincation h-100">  <div class="container vh-100">    <div class="row justify-content-center h-100 align-items-center">      <div class="col-lg-6 col-md-8">        <div class="authincation-content">          <div class="row no-gutters">            <div class="col-xl-12">              <div class="auth-form">                <h4 class="text-center mb-4">Forgot Password</h4>                <form role="form" [formGroup]="emailForm">                  <div class="form-group">                    <label><strong>Email</strong></label>                    <input type="email" class="form-control" formControlName="email" placeholder="hello@example.com">                  </div>                  <div class="text-center">                    <button type="submit" class="btn btn-primary btn-block" (click)="onLoggedin()">SUBMIT</button>                  </div>                </form>              </div>            </div>          </div>        </div>      </div>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="content-body">  <div class="container-fluid">    <div class="row">      <div class="col-xl-12">        <div class="table-responsive table-hover fs-14">          <table class="table display mb-4 dataTablesCard dataTable short-one  card-table text-black" id="example5">            <thead>              <tr>                <th>Request ID</th>                <th>Date</th>                <th>Request Description</th>                <th>Amount</th>                <th>From</th>                <th>Request Status</th>                <th>Action</th>              </tr>            </thead>            <tbody>              <tr *ngFor="let request of requests; let i= index">                <td class="pr-0">                  {{request?.id}}                </td>                <td>{{request?.createdAt | date: \'dd/MM/yyyy\' }}</td>                <td><a [routerLink]="[\'/project\',request?.projectSlug]">{{request?.description}}</a></td>                <td>{{request?.amount}}</td>                <td><img [src]="request?.fromUserImage" class="rounded-circle mr-2 width30 height30"                    alt=""><span>{{request?.fromUserName}}</span></td>                <td>                  <span class="text-black font-w600">{{request.approvalStatus}}</span>                </td>                <td><button class="btn btn-primary btn-sm" [disabled]="request.approvalStatus"                    (click)="update(request?.id)"> Approve</button></td>                <!-- <td>                  <a href="javascript:void(0);"                    class="btn-link {{request.status_class}} float-right">{{request.status}}</a>                </td> -->              </tr>            </tbody>          </table>        </div>      </div>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateProjectComponent', 'selector': 'create-project'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotPasswordPageComponent', 'selector': 'app-forgot-password'},{'name': 'FundedProjectsPageComponent', 'selector': 'funded-projects-page'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'ImageUploadComponent', 'selector': 'image-upload'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MyProjectsPageComponent', 'selector': 'my-projects'},{'name': 'MyTransactionPageComponent', 'selector': 'my-transaction-page'},{'name': 'NavHeaderComponent', 'selector': 'app-nav-header'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PagesComponent', 'selector': 'app-pages'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProjectDetailPageComponent', 'selector': 'product-detail-page'},{'name': 'RegisterPageComponent', 'selector': 'app-register'},{'name': 'RequestPageComponent', 'selector': 'request-page'},{'name': 'SpinnerComponent', 'selector': 'spinner'},{'name': 'TransactionListComponent', 'selector': 'transaction-list'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'ForgotPasswordPageComponent'};
+    var ACTUAL_COMPONENT = {'name': 'RequestPageComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -488,7 +467,7 @@ export class ForgotPasswordPageComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'ForgotPasswordPageComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'RequestPageComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

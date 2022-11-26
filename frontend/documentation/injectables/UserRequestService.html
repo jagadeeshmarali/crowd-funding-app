@@ -28,17 +28,19 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content component">
+               <div class="content injectable">
                    <div class="content-data">
 
 
 
 
+
+
+
+
 <ol class="breadcrumb">
-  <li>Components</li>
-  <li
-  >
-  MyProjectsPageComponent</li>
+  <li>Injectables</li>
+  <li >UserRequestService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -48,84 +50,25 @@
         <li >
             <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
         </li>
-        <li >
-            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
-        </li>
-        <li >
-            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
-        </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info"><p class="comment">
-    <h3>File</h3>
-</p>
-<p class="comment">
-    <code>src/app/pages/my-projects/my-projects.component.ts</code>
-</p>
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/services/userrequest.service.ts</code>
+        </p>
 
 
 
 
 
-
-<section>
-    <h3>Metadata</h3>
-    <table class="table table-sm table-hover metadata">
-        <tbody>
-
-
-
-
-
-
-
-
-
-
-
-            <tr>
-                <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>my-projects</code></td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./my-projects.component.html</code></td>
-            </tr>
-
-
-
-
-
-
-
-
-        </tbody>
-    </table>
-</section>
-
-    <section>
+            <section>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Properties</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#products" >products</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -136,7 +79,13 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#getProjects" >getProjects</a>
+                                <a href="#create" >create</a>
+                            </li>
+                            <li>
+                                <a href="#getRequests" >getRequests</a>
+                            </li>
+                            <li>
+                                <a href="#updateRequest" >updateRequest</a>
                             </li>
                         </ul>
                     </td>
@@ -150,18 +99,18 @@
     </table>
 </section>
 
-    <section>
+            <section>
     <h3 id="constructor">Constructor</h3>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(projectService: <a href="../injectables/ProjectService.html" target="_self">ProjectService</a>)</code>
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/pages/my-projects/my-projects.component.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/services/userrequest.service.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -179,10 +128,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>projectService</td>
+                                                        <td>http</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/ProjectService.html" target="_self" >ProjectService</a></code>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -199,11 +148,7 @@
         </table>
 </section>
 
-
-
-
-
-    <section>
+            <section>
     
     <h3 id="methods">
         Methods
@@ -212,24 +157,24 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getProjects"></a>
+                    <a name="create"></a>
                     <span class="name">
-                        <span ><b>getProjects</b></span>
-                        <a href="#getProjects"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>create</b></span>
+                        <a href="#create"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getProjects()</code>
+<code>create(payload)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="13"
-                            class="link-to-prism">src/app/pages/my-projects/my-projects.component.ts:13</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="10"
+                            class="link-to-prism">src/app/services/userrequest.service.ts:10</a></div>
                 </td>
             </tr>
 
@@ -238,116 +183,177 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>payload</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRequests"></a>
+                    <span class="name">
+                        <span ><b>getRequests</b></span>
+                        <a href="#getRequests"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getRequests()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="15"
+                            class="link-to-prism">src/app/services/userrequest.service.ts:15</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </div>
                 </td>
             </tr>
         </tbody>
     </table>
-</section>
-    <section>
-    
-    <h3 id="inputs">
-        Properties
-    </h3>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="products"></a>
+                    <a name="updateRequest"></a>
                     <span class="name">
-                        <span ><b>products</b></span>
-                        <a href="#products"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>updateRequest</b></span>
+                        <a href="#updateRequest"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/pages/my-projects/my-projects.component.ts:9</a></div>
-                        </td>
-                    </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateRequest(id)</code>
+                </td>
+            </tr>
 
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="18"
+                            class="link-to-prism">src/app/services/userrequest.service.ts:18</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
         </tbody>
     </table>
 </section>
 
-</div>
+    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &quot;@angular/core&quot;;
-import { ProjectService } from &quot;../../services&quot;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { environment } from &#x27;./../../environments/environment&#x27;;
+import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { Injectable } from &quot;@angular/core&quot;;
 
-@Component({
-  selector: &quot;my-projects&quot;,
-  templateUrl: &quot;./my-projects.component.html&quot;
+@Injectable({
+  providedIn: &quot;root&quot;
 })
-export class MyProjectsPageComponent {
-  products: any;
-  constructor(private projectService: ProjectService) {
-    this.getProjects();
+export class UserRequestService {
+  constructor(private http: HttpClient) { }
+  create(payload) {
+    return this.http.post(environment.backend_url + &quot;/user-request-create&quot;, {
+      ...payload
+    });
   }
-  getProjects() {
-    this.projectService.getMyProjects().toPromise().then((data) &#x3D;&gt; {
-      this.products &#x3D; data;
-      console.log(data);
-    })
+  getRequests() {
+    return this.http.get(environment.backend_url + &quot;/get_all_requests&quot;);
+  }
+  updateRequest(id) {
+    return this.http.post(environment.backend_url + &#x60;/update/user-request?id&#x3D;${id}&#x60;, {
+      &quot;id&quot;: id,
+      &quot;status&quot;: true
+    });
+
   }
 }</code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;content-body&quot;&gt;
-  &lt;div class&#x3D;&quot;container-fluid&quot;&gt;
-    &lt;app-product-list [products]&#x3D;&quot;products&quot;&gt;&lt;/app-product-list&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-    </div>
-
-
-    <div class="tab-pane fade " id="c-tree">
-        <div id="tree-container"></div>
-        <div class="tree-legend">
-            <div class="title">
-                <b>Legend</b>
-            </div>
-            <div>
-                <div class="color htmlelement"></div><span>Html element</span>
-            </div>
-            <div>
-                <div class="color component"></div><span>Component</span>
-            </div>
-            <div>
-                <div class="color directive"></div><span>Html element with directive</span>
-            </div>
-        </div>
-    </div>
-
-    
 </div>
-
-<script src="../js/libs/vis.min.js"></script>
-<script src="../js/libs/htmlparser.js"></script>
-<script src="../js/libs/deep-iterator.js"></script>
-<script>
-        var COMPONENT_TEMPLATE = '<div><div class="content-body">  <div class="container-fluid">    <app-product-list [products]="products"></app-product-list>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CreateProjectComponent', 'selector': 'create-project'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotPasswordPageComponent', 'selector': 'app-forgot-password'},{'name': 'FundedProjectsPageComponent', 'selector': 'funded-projects-page'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'ImageUploadComponent', 'selector': 'image-upload'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MyProjectsPageComponent', 'selector': 'my-projects'},{'name': 'MyTransactionPageComponent', 'selector': 'my-transaction-page'},{'name': 'NavHeaderComponent', 'selector': 'app-nav-header'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PagesComponent', 'selector': 'app-pages'},{'name': 'ProductDetailComponent', 'selector': 'app-product-detail'},{'name': 'ProductListComponent', 'selector': 'app-product-list'},{'name': 'ProjectDetailPageComponent', 'selector': 'product-detail-page'},{'name': 'RegisterPageComponent', 'selector': 'app-register'},{'name': 'RequestPageComponent', 'selector': 'request-page'},{'name': 'SpinnerComponent', 'selector': 'spinner'},{'name': 'TransactionListComponent', 'selector': 'transaction-list'}];
-    var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'MyProjectsPageComponent'};
-</script>
-<script src="../js/tree.js"></script>
-
-
-
-
 
 
 
@@ -386,8 +392,8 @@ export class MyProjectsPageComponent {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'MyProjectsPageComponent.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'UserRequestService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

@@ -83,6 +83,7 @@ import { ProjectDetailPageComponent } from &#x27;./project-detail/project-detail
 import { MyProjectsPageComponent } from &#x27;./my-projects/my-projects.component&#x27;;
 import { MyTransactionPageComponent } from &#x27;./my-transactions/my-transactions.component&#x27;;
 import { FundedProjectsPageComponent } from &#x27;./funded-projects/funded-projects.component&#x27;;
+import { RequestPageComponent } from &#x27;./requests/request.component&#x27;;
 
 const routes: Routes &#x3D; [
   {
@@ -122,6 +123,12 @@ const routes: Routes &#x3D; [
     component: FundedProjectsPageComponent,
     pathMatch: &quot;full&quot;,
     canActivate: [AuthGuard]
+  },
+  {
+    path: &quot;requests&quot;,
+    component: RequestPageComponent,
+    pathMatch: &quot;full&quot;,
+    canActivate: [AuthGuard, AdminGuard]
   }
 
 
