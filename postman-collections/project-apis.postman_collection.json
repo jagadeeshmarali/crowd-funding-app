@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "b15b509b-e345-48ec-b95c-0c2bfd11c447",
+		"name": "project-apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24627853"
+	},
+	"item": [
+		{
+			"name": "create-project",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"Project1\",\n    \"description\":\"This is Project 1\",\n    \"slug\":\"project-1\",\n    \"fundingGoal\":2000,\n    \"campaignEndDate\":\"2022-11-24T08:58:01\",\n    \"launchDate\": \"2022-11-22T08:58:01\",\n    \"imageUrl\":\"url-project-1\",\n    \"createdBy\":\"UserId321\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/project-create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"project-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "project-update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/private/project-update?title=sfffeddsderw&description=This is the right description&slug=frefnii&createdBy=bfrieb&fundingGoal=12344&minBid=74&launchDate=Thu Nov 17 11:31:59 IST 2022&campaignDuration=30&imageUrl=fjnrenfker",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"private",
+						"project-update"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "sfffeddsderw"
+						},
+						{
+							"key": "description",
+							"value": "This is the right description"
+						},
+						{
+							"key": "slug",
+							"value": "frefnii"
+						},
+						{
+							"key": "createdBy",
+							"value": "bfrieb"
+						},
+						{
+							"key": "fundingGoal",
+							"value": "12344"
+						},
+						{
+							"key": "minBid",
+							"value": "74"
+						},
+						{
+							"key": "launchDate",
+							"value": "Thu Nov 17 11:31:59 IST 2022"
+						},
+						{
+							"key": "campaignDuration",
+							"value": "30"
+						},
+						{
+							"key": "imageUrl",
+							"value": "fjnrenfker"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "project-delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiVG9ueSBNYXRoZW4iLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MzJ2SWJ6clhKdkI0Y3JkZFltc0VFWHhqWXZxYjRzU3dJb0xMRVc9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY3Jvd2QtZnVuZGluZy1hcHAtNWI5ZWUiLCJhdWQiOiJjcm93ZC1mdW5kaW5nLWFwcC01YjllZSIsImF1dGhfdGltZSI6MTY2ODY1Mzk3NiwidXNlcl9pZCI6IkROdHBXNkREa1ladTRXZ2ozQ05QTUlORzBxcTIiLCJzdWIiOiJETnRwVzZERGtZWnU0V2dqM0NOUE1JTkcwcXEyIiwiaWF0IjoxNjY4ODk3MzU0LCJleHAiOjE2Njg5MDA5NTQsImVtYWlsIjoidG9ueW1hdGhlbnNob3AxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTE4MzczMDMzNzA3NjY0MzczNjQyIl0sImVtYWlsIjpbInRvbnltYXRoZW5zaG9wMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.JWAGqHY-cVM6CO3xP3yiwdjX2Q-Yal0AjI8S38MNXmW5kA1UzZBrxE7Up369lYZAQS9yCpOm_MwwRBz3M6Hw7h5ZcNMYZ1ChiAdpgVqyVa-8xHS5bgH-DOTq-AXNbSus6YxAN4TiJFEnepQ5xYkKqY3bDB_L0sz2Pik78_6CAAwQCqNlEhVHTjyQMEtMZjGQ0WurPFaAHQeb-u2VKSnF6_dKQknR03e5X9CCXOPOdMoRRuoREaE_MrhfsScHgv1UC8kQUebv8XkWq5ypg91Z3_s_kxM_BlzW0Ud79K_faexjdoH586n36suP48C63tapoDGAZ4KVtD3m76glW8TkSw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/private/project-delete?project_uid=637966564bca4c5c151563c1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"private",
+						"project-delete"
+					],
+					"query": [
+						{
+							"key": "project_uid",
+							"value": "637966564bca4c5c151563c1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImE5NmFkY2U5OTk5YmJmNWNkMzBmMjlmNDljZDM3ZjRjNWU2NDI3NDAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiVG9ueSBNYXRoZW4iLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MzJ2SWJ6clhKdkI0Y3JkZFltc0VFWHhqWXZxYjRzU3dJb0xMRVc9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY3Jvd2QtZnVuZGluZy1hcHAtNWI5ZWUiLCJhdWQiOiJjcm93ZC1mdW5kaW5nLWFwcC01YjllZSIsImF1dGhfdGltZSI6MTY2ODY1Mzk3NiwidXNlcl9pZCI6IkROdHBXNkREa1ladTRXZ2ozQ05QTUlORzBxcTIiLCJzdWIiOiJETnRwVzZERGtZWnU0V2dqM0NOUE1JTkcwcXEyIiwiaWF0IjoxNjY5MzM1NjcyLCJleHAiOjE2NjkzMzkyNzIsImVtYWlsIjoidG9ueW1hdGhlbnNob3AxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTE4MzczMDMzNzA3NjY0MzczNjQyIl0sImVtYWlsIjpbInRvbnltYXRoZW5zaG9wMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.eLSVcmqJEWy7q9gZcqdUoSi-xxErdanT1CORRNG1Ywx_AfseeQFpuWSyAmgCbfbXWQ7HY49fNy1cNVr2GKkm-S10sqgXrZY_oFyBPkL3FKdgNXz8ajHmv1CnWFpN-xcvEdmvIUui3VKsQBHHFjV7DDIw2qyDTfQJ_T8pRc_p6fkUEDb_N60wtXsnd_hBHgbV9gCIBENmUPgf20zy96sRGemY2FxOwek5OHK7tDoyIKI49pS897L-RrD-oH70x_enaNoUJ69wzy3zXtpCausY6DWCrxZqV64bfsmHcMh3u-4Uhhpq72xUVevPFOSUO3Gr4Xq6OlkNsq2Drhpl7c7ciw",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

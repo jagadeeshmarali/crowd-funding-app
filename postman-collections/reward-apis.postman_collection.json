@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "6687b716-c3a2-4815-b57a-46f9e81c45ae",
+		"name": "reward-apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24627853"
+	},
+	"item": [
+		{
+			"name": "create-reward",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"projectId\":\"6380041834a0003ef78314ef\",\n     \"rewardAmount\":5000,\n     \"description\":\"Reward 2 for Project 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reward-create?projectId=63796caa4bca4c5c151563c3&userId=asddsa&rewardAmount=100&description=This is a basic reward",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reward-create"
+					],
+					"query": [
+						{
+							"key": "projectId",
+							"value": "63796caa4bca4c5c151563c3"
+						},
+						{
+							"key": "userId",
+							"value": "asddsa"
+						},
+						{
+							"key": "rewardAmount",
+							"value": "100"
+						},
+						{
+							"key": "description",
+							"value": "This is a basic reward"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reward-list-by-project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiVG9ueSBNYXRoZW4iLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MzJ2SWJ6clhKdkI0Y3JkZFltc0VFWHhqWXZxYjRzU3dJb0xMRVc9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY3Jvd2QtZnVuZGluZy1hcHAtNWI5ZWUiLCJhdWQiOiJjcm93ZC1mdW5kaW5nLWFwcC01YjllZSIsImF1dGhfdGltZSI6MTY2ODY1Mzk3NiwidXNlcl9pZCI6IkROdHBXNkREa1ladTRXZ2ozQ05QTUlORzBxcTIiLCJzdWIiOiJETnRwVzZERGtZWnU0V2dqM0NOUE1JTkcwcXEyIiwiaWF0IjoxNjY5MDE1MjQ4LCJleHAiOjE2NjkwMTg4NDgsImVtYWlsIjoidG9ueW1hdGhlbnNob3AxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTE4MzczMDMzNzA3NjY0MzczNjQyIl0sImVtYWlsIjpbInRvbnltYXRoZW5zaG9wMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.nU3RjT0t4R2UFOS71w6o5OVqZSiG6LjW9f4SKdnqU4kdMoR67sMq2yfJMss2m1nlavMmfEYaIHMIY7NwoDTWCbD5hFGMy1iratbGH7f6XuzDY_Vi_ylqoCNQQ3UW82TALjJS3xI18PlrabwiqNcHv4z2lJmxCQxjNxbRfiyxLzB-13unvPvFXijUibfH9o607LFwSOozbewY875ykE_uck-GnGK5aDxtj9VyFCbSjGldtgpXYO5HTQybByW1RIFzCaAydYlQ9vbStncz8MiIrBkJQHiRYGi3pPDo4RsBtNmMUNI0jnGUoJObJoUiAM3ezqefVHObQsHgmCMZdYAaSQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/reward-list-by-project",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reward-list-by-project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reward-list",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImE5NmFkY2U5OTk5YmJmNWNkMzBmMjlmNDljZDM3ZjRjNWU2NDI3NDAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiVG9ueSBNYXRoZW4iLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MzJ2SWJ6clhKdkI0Y3JkZFltc0VFWHhqWXZxYjRzU3dJb0xMRVc9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY3Jvd2QtZnVuZGluZy1hcHAtNWI5ZWUiLCJhdWQiOiJjcm93ZC1mdW5kaW5nLWFwcC01YjllZSIsImF1dGhfdGltZSI6MTY2ODY1Mzk3NiwidXNlcl9pZCI6IkROdHBXNkREa1ladTRXZ2ozQ05QTUlORzBxcTIiLCJzdWIiOiJETnRwVzZERGtZWnU0V2dqM0NOUE1JTkcwcXEyIiwiaWF0IjoxNjY5MzM1NjcyLCJleHAiOjE2NjkzMzkyNzIsImVtYWlsIjoidG9ueW1hdGhlbnNob3AxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTE4MzczMDMzNzA3NjY0MzczNjQyIl0sImVtYWlsIjpbInRvbnltYXRoZW5zaG9wMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.eLSVcmqJEWy7q9gZcqdUoSi-xxErdanT1CORRNG1Ywx_AfseeQFpuWSyAmgCbfbXWQ7HY49fNy1cNVr2GKkm-S10sqgXrZY_oFyBPkL3FKdgNXz8ajHmv1CnWFpN-xcvEdmvIUui3VKsQBHHFjV7DDIw2qyDTfQJ_T8pRc_p6fkUEDb_N60wtXsnd_hBHgbV9gCIBENmUPgf20zy96sRGemY2FxOwek5OHK7tDoyIKI49pS897L-RrD-oH70x_enaNoUJ69wzy3zXtpCausY6DWCrxZqV64bfsmHcMh3u-4Uhhpq72xUVevPFOSUO3Gr4Xq6OlkNsq2Drhpl7c7ciw",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
