@@ -25,13 +25,13 @@ public class TransactionService {
     private MongoTemplate mt;
     @Autowired
     private SecurityService securityService;
-    public List<Transaction> getList(){
+
+    public List<Transaction> getList() {
         return transactionRepo.findAll(
-                Sort.by(Sort.Direction.DESC,"updatedAt")
-        );
+                Sort.by(Sort.Direction.DESC, "updatedAt"));
     }
 
-    public Transaction createTransaction(Transaction transaction){
+    public Transaction createTransaction(Transaction transaction) {
         transaction.setProjectId(new ObjectId(transaction.getProjectId().toString()));
         transaction.setRewardId(new ObjectId(transaction.getRewardId().toString()));
         transaction.setUserId(securityService.getUser().getUid());
@@ -42,26 +42,36 @@ public class TransactionService {
         return transactionRepo.save(transaction);
     }
 
-//    public void deleteTransaction(String id){
-//        transactionRepo.deleteById(id);
-//    }
+    // public void deleteTransaction(String id){
+    // transactionRepo.deleteById(id);
+    // }
 
     public Optional<Transaction> getTransaction(String uid) {
         return transactionRepo.findById(uid);
     }
 
-    public List<Transaction> getUserTransactions(){
+    public List<Transaction> getUserTransactions() {
         Query query = new Query();
         query.addCriteria(Criteria.where("userId").is(securityService.getUser().getUid()));
-        return mt.find(query,Transaction.class);
+        return mt.find(query, Transaction.class);
     }
 
-    public List<Transaction> getProjectTransactions(String projectId){
+    public List<Transaction> getProjectTransactions(String projectId) {
         Query query = new Query();
-//        query.addCriteria(Criteria.where("userId").is(securityService.getUser().getUid()));
+        // query.addCriteria(Criteria.where("userId").is(securityService.getUser().getUid()));
         query.addCriteria(Criteria.where("projectId").is(new ObjectId(projectId)));
-        return mt.find(query,Transaction.class);
+        return mt.find(query, Transaction.class);
+    }
+
+    public Transaction updateTransaction(String id, boolean status) {
+        Query query = new Query();
+        // query.addCriteria(Criteria.where("userId").is(securityService.getUser().getUid()));
+        query.addCriteria(Criteria.where("_id").is(new ObjectId(id)));
+        Transaction transaction = mt.findOne(query, Transaction.class);
+        transaction.setRewardStatus(status);
+        transaction.setUpdatedAt(new Date());
+        mt.save(transaction);
+        return mt.findOne(query, Transaction.class);
     }
 
 }
-

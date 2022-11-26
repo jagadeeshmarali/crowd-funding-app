@@ -57,7 +57,7 @@
 											</div>
 										</div>
 										<div class="row"
-											*ngIf="authService.currentUser.uid == projectDetail?.userId && amountReceived==projectDetail?.fundingGoal">
+											*ngIf="authService.currentUser.uid == projectDetail?.userId && amountReceived>=projectDetail?.fundingGoal">
 											<button class="btn btn-primary btn-sm" (click)="openRequest(requestAmount)"> Request
 												Amount</button>
 										</div>
@@ -106,7 +106,8 @@
 									<span class="text-black font-w600">{{transaction.rewardStatus}}</span>
 								</td>
 								<td>
-									<button class="btn btn-primary btn-sm" [disabled]="transaction.rewardStatus">Reward</button>
+									<button class="btn btn-primary btn-sm" [disabled]="transaction.rewardStatus"
+										(click)="updateReward(transaction?.id)">Reward</button>
 								</td>
 							</tr>
 						</tbody>

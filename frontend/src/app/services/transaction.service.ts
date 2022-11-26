@@ -18,4 +18,11 @@ export class TransactionService {
   getProjectTransactions(id) {
     return this.http.get(`${environment.backend_url}/get-project-transactions?projectId=${id}`);
   }
+  updateTransaction(id) {
+    return this.http.post(environment.backend_url + `/update/transaction?id=${id}`, {
+      "id": id,
+      "status": true
+    });
+
+  }
 }
