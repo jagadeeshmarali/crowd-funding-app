@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "412d4acb-fb0e-40cf-97fd-46d7ac9b37c0",
+		"name": "Transaction-apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24627853"
+	},
+	"item": [
+		{
+			"name": "transaction-create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiVG9ueSBNYXRoZW4iLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MzJ2SWJ6clhKdkI0Y3JkZFltc0VFWHhqWXZxYjRzU3dJb0xMRVc9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY3Jvd2QtZnVuZGluZy1hcHAtNWI5ZWUiLCJhdWQiOiJjcm93ZC1mdW5kaW5nLWFwcC01YjllZSIsImF1dGhfdGltZSI6MTY2ODY1Mzk3NiwidXNlcl9pZCI6IkROdHBXNkREa1ladTRXZ2ozQ05QTUlORzBxcTIiLCJzdWIiOiJETnRwVzZERGtZWnU0V2dqM0NOUE1JTkcwcXEyIiwiaWF0IjoxNjY4OTAxMTIyLCJleHAiOjE2Njg5MDQ3MjIsImVtYWlsIjoidG9ueW1hdGhlbnNob3AxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTE4MzczMDMzNzA3NjY0MzczNjQyIl0sImVtYWlsIjpbInRvbnltYXRoZW5zaG9wMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.M43MvyulbwjknvgJGnbITAYvC3Ivcjup6waeC9o-1xbrWb_hm1c0ou3CKgfGlAu1TLdtf_n1mz7FF2PPDrwi-jEprGl2-zHMW_yEFC7sxn-9p1nGLkbEIFvJrzdACpYPdHF3lSYoMwxb5KzwQ8bTH5NWCoJ-J2Vrwqwfslb5aBdrLhH2DV1nuP6MWj9hC_8XWDMWlPrdG0HLgo1t0r6gVKv5-1YfPvG6KcJAFkU9kKTlWjXdYmkiP2LtMMq2D-ubrFtiJnG2Xpm8ijpnBFoHO4K3zWq6QTRhpUl0CBP2cAzckVMq1MgAdViAhCOekiE2ld9dZhhDDPyxIa0qLApNiQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/private/transaction-create?userId&projectId&rewardId&rewardAmount&rewardStatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"private",
+						"transaction-create"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": null
+						},
+						{
+							"key": "projectId",
+							"value": null
+						},
+						{
+							"key": "rewardId",
+							"value": null
+						},
+						{
+							"key": "rewardAmount",
+							"value": null
+						},
+						{
+							"key": "rewardStatus",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-user-transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/get-user-transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"get-user-transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-project-transactions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImY4MDljZmYxMTZlNWJhNzQwNzQ1YmZlZGE1OGUxNmU4MmYzZmQ4MDUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiVG9ueSBNYXRoZW4iLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MzJ2SWJ6clhKdkI0Y3JkZFltc0VFWHhqWXZxYjRzU3dJb0xMRVc9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY3Jvd2QtZnVuZGluZy1hcHAtNWI5ZWUiLCJhdWQiOiJjcm93ZC1mdW5kaW5nLWFwcC01YjllZSIsImF1dGhfdGltZSI6MTY2ODY1Mzk3NiwidXNlcl9pZCI6IkROdHBXNkREa1ladTRXZ2ozQ05QTUlORzBxcTIiLCJzdWIiOiJETnRwVzZERGtZWnU0V2dqM0NOUE1JTkcwcXEyIiwiaWF0IjoxNjY4OTAxMTIyLCJleHAiOjE2Njg5MDQ3MjIsImVtYWlsIjoidG9ueW1hdGhlbnNob3AxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTE4MzczMDMzNzA3NjY0MzczNjQyIl0sImVtYWlsIjpbInRvbnltYXRoZW5zaG9wMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.M43MvyulbwjknvgJGnbITAYvC3Ivcjup6waeC9o-1xbrWb_hm1c0ou3CKgfGlAu1TLdtf_n1mz7FF2PPDrwi-jEprGl2-zHMW_yEFC7sxn-9p1nGLkbEIFvJrzdACpYPdHF3lSYoMwxb5KzwQ8bTH5NWCoJ-J2Vrwqwfslb5aBdrLhH2DV1nuP6MWj9hC_8XWDMWlPrdG0HLgo1t0r6gVKv5-1YfPvG6KcJAFkU9kKTlWjXdYmkiP2LtMMq2D-ubrFtiJnG2Xpm8ijpnBFoHO4K3zWq6QTRhpUl0CBP2cAzckVMq1MgAdViAhCOekiE2ld9dZhhDDPyxIa0qLApNiQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/private/transaction-create?userId&projectId&rewardId&rewardAmount&rewardStatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"private",
+						"transaction-create"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": null
+						},
+						{
+							"key": "projectId",
+							"value": null
+						},
+						{
+							"key": "rewardId",
+							"value": null
+						},
+						{
+							"key": "rewardAmount",
+							"value": null
+						},
+						{
+							"key": "rewardStatus",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImE5NmFkY2U5OTk5YmJmNWNkMzBmMjlmNDljZDM3ZjRjNWU2NDI3NDAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiVG9ueSBNYXRoZW4iLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MzJ2SWJ6clhKdkI0Y3JkZFltc0VFWHhqWXZxYjRzU3dJb0xMRVc9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY3Jvd2QtZnVuZGluZy1hcHAtNWI5ZWUiLCJhdWQiOiJjcm93ZC1mdW5kaW5nLWFwcC01YjllZSIsImF1dGhfdGltZSI6MTY2ODY1Mzk3NiwidXNlcl9pZCI6IkROdHBXNkREa1ladTRXZ2ozQ05QTUlORzBxcTIiLCJzdWIiOiJETnRwVzZERGtZWnU0V2dqM0NOUE1JTkcwcXEyIiwiaWF0IjoxNjY5MzQzMDAyLCJleHAiOjE2NjkzNDY2MDIsImVtYWlsIjoidG9ueW1hdGhlbnNob3AxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTE4MzczMDMzNzA3NjY0MzczNjQyIl0sImVtYWlsIjpbInRvbnltYXRoZW5zaG9wMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.e9LsnMm-p7kgkyIymdzYYFcIYrRuHdNhPj1tQ1ivZNlI5lq2oXCJET3iuq31NleITIxRTxrcX34hu_jUaT0XfTPrMtLd3zCsLAGPE1TMRAWxWTAJWz4sOjgNNmiJ8emAFnerQDmaUmR6q4D09HEti4sBjO9r4KDVmFJ6KuSxu-lmk1bxahZE_hKMWinAQ6O5FZ3xR1EZf74Di7DX6HO8GH_XE3dbyDxT38CQDAFOAJ0maGVKJ96n0w-ys_Kek637IqOywhyt4Pey8dO3DbpAVISikC19WSfCK-SpEjpqx6ovoXRwoL6AAaX20kDZcXh7y7Xi_218dTk9jkauoC8r2Q",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

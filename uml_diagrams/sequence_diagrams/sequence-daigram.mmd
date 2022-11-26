@@ -1,0 +1,24 @@
+```mermaid
+
+sequenceDiagram
+    autonumber
+    User ->>+ Project: Create Project
+    User->>+ Rewards: Create Rewards
+    opt Transacion
+        alt is userId != createdBy
+            User ->>+ Project: Fund Project (by selecting reward amount)
+            Transaction->>User: Transaction
+        end
+    end
+    alt is receivedAmount >= fundingGaol
+         User->>+userRequest: Request Amount
+    end
+
+    alt is role == admin
+        User->>+userRequest: Validate and Approve Request
+        userRequest-->User: Receive Funds
+
+    end
+
+    
+```

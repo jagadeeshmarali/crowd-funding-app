@@ -1,6 +1,7 @@
 package com.crowdfunding.app.controller;
 
 import com.crowdfunding.app.model.Transaction;
+import com.crowdfunding.app.model.UserRequest;
 import com.crowdfunding.app.service.TransactionService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,5 +29,9 @@ public class TransactionController {
     @GetMapping("/get-project-transactions")
     public List<Transaction> getProjectTransactions(String projectId){
         return transactionService.getProjectTransactions(projectId);
+    }
+    @RequestMapping(value = "/update/transaction", method = RequestMethod.POST)
+    public Transaction updateTransaction(String id){
+        return transactionService.updateTransaction(id,true);
     }
 }

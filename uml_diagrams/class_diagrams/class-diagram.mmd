@@ -1,0 +1,106 @@
+```mermaid
+  classDiagram
+      class UserRequest{
+          UserRequest : +string description
+          UserRequest:  +string userId
+          UserRequest : +ObjectID projectId
+          UserRequest : +boolean approvalStatus
+          UserRequest: +string fromUserName
+          UserRequest: +string fromUserImage
+          UserRequest: +double amount
+          UserRequest: +string projectSlug
+      }
+
+      class BaseModel{
+          BaseModel: +string id
+          BaseModel: +Date createdAt
+          BaseModel: +Date updatedAt
+      }
+
+      class Project {
+          Project: +string userId 
+          Project: +string description
+          Project: +string title
+          Project: +string slug
+          Project: +string createdBy
+          Project: +double fundingGoal
+          Project: +date launchDate
+          Project: +date campaignEndDate
+          Project: +string imageUrl
+      }
+
+      class Reward{
+          Reward: +string description
+          Reward: +ObjectID projectId
+          Reward: +string userId
+          Reward: +double rewardAmount
+      }
+
+
+      class Transaction {
+          Transaction:+ string userId 
+          Transaction:+ ObjectID projectId
+          Transaction:+ ObjectID rewardId
+          Transaction: +double rewardAmount
+          Transaction: +string projectTitle
+          Transaction:+string fromUserName
+          Transaction:+string fromUserimage
+          Transaction: +string projectImageurl
+          Transaction: +string projectSlug
+          Transaction: +boolean rewardStatus
+      }
+
+      class CookieProperties{
+          CookieProperties: + string domain
+          CookieProperties: + string path
+          CookieProperties: + boolean httpOnly
+          CookieProperties:  + boolean secure
+      }
+
+      class Credentials{
+          Credentials: -CredentialType type
+          Credentials: -FirebaseToken decodedToken
+          Credentials: -string idToken
+          Credentials: -string session
+      }
+
+      class FirebaseProperties{
+          FirebaseProperties: +int sessionExpiryInDays
+          FirebaseProperties: +string databaseUrl
+          FirebaseProperties: +boolean enableStrictServerSession
+          FirebaseProperties: +boolean enableCheckSessionRevoked
+          FirebaseProperties: +boolean enableLogoutEverywhere
+      }
+
+      class SecurityProperties{
+          SecurityProperties:+CookieProperties cookieProps
+          SecurityProperties:	+FirebaseProperties firebaseProps
+          SecurityProperties:	+boolean allowCredentials
+          SecurityProperties:	+List<string> allowedOrigins
+          SecurityProperties:	+List<string> allowedHeaders
+          SecurityProperties:	+List<string> exposedHeaders
+          SecurityProperties:	+List<string> allowedMethods
+          SecurityProperties:	+List<string> allowedPublicApis
+      }
+
+      class User{
+          User: - string uid
+          User: - string name
+          User: - string email
+          User: - boolean isEmailVerified
+          User: - string issuer
+          User: - string picture
+      }
+
+      BaseModel --|> Project : Inheritance 
+      BaseModel --|> Reward : Inheritance
+      BaseModel --|> UserRequest : Inheritance
+      BaseModel --|> Transaction : Inheritance
+      Project..User : Link
+      Project..Reward : Link
+      Project..Transaction : Link
+      Reward..Transaction : Link
+      Project..UserRequest : Link
+      User..UserRequest : Link
+      User..Reward : Link
+```

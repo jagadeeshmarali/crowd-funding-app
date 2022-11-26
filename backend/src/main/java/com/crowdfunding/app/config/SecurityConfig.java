@@ -3,7 +3,6 @@ package com.crowdfunding.app.config;
 import com.crowdfunding.app.filter.SecurityFilter;
 import com.crowdfunding.app.model.auth.SecurityProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
-//import com.kunal52.springandfirebaseauth.auth.models.SecurityProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

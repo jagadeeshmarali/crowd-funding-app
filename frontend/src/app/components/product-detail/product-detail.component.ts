@@ -106,5 +106,10 @@ export class ProductDetailComponent implements OnInit {
       this.modalService.dismissAll();
     })
   }
+  updateReward(id) {
+    this.transactionService.updateTransaction(id).toPromise().then((data) => {
+      console.log(data);
+    })
+  }
 
 }
